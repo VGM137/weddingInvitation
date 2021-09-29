@@ -1,0 +1,37 @@
+
+body{
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100vh;
+  width: 100%;
+  background-color: rgb(3, 4, 94);
+/*   overflow: hidden; */
+}
+#app{
+  height: 100vh;
+  width: 100%;
+  background-color: rgb(3, 4, 94);
+}
+.home{
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+
+@media screen and (max-width: 767px){
+/*   body{
+    height: auto;
+  } */
+/*   #app{
+    height: auto;
+    overflow: scroll;
+  } */
+  .home{
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto auto;
+  }
+}

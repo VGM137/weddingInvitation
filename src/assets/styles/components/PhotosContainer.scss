@@ -1,0 +1,15 @@
+.photos-container{
+  width: 100%;
+  height: max-content;
+  display: block;
+  position: sticky;
+  top: 0;
+}
+
+@media screen and (max-width: 767px){
+  .photos-container{
+    height: 100%;
+    display: inline-flex;
+    flex-direction: column;
+  }
+}

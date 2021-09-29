@@ -1,0 +1,25 @@
+.info-container{
+  display: grid;
+  grid-template-rows: repeat(6,50vh);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  grid-gap: 100vh;
+/*   margin-top: 100vh; */
+}
+.text-section{
+  display: block;
+  height: 50vh;
+  justify-content: center;
+  margin: auto;
+  text-align: center;
+  background: rgb(44, 106, 213);
+  width: 100%;
+}
+.main-text{
+  font-size: 1em;
+}
+.secondary-text{
+  font-size: .8em;
+}

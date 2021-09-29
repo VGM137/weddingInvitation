@@ -1,0 +1,25 @@
+.photo-container{
+  width: 100%;
+  display: inline-flex;
+  height: auto;
+}
+.photo{
+  max-width: 960px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 767px){
+  .photo-container{
+    width: 100%;
+    display: inline-flex;
+    height: fit-content;
+  }
+  .photo{
+    max-width: 960px;
+    width: 100%;
+    height: auto;
+    margin: auto;
+  }
+}
