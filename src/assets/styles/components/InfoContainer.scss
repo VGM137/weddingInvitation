@@ -16,10 +16,25 @@
   text-align: center;
   background: rgb(44, 106, 213);
   width: 100%;
+  overflow: hidden;
 }
 .main-text{
   font-size: 1em;
+  margin: 15px auto;
 }
 .secondary-text{
   font-size: .8em;
+  margin: 15px auto;
 }
+
+
+.visible{
+  animation-name: example;
+  animation-duration: 2s;
+}
+
+@keyframes example {
+  from {margin-top: 100px;}
+  to {margin-top: 15px;}
+}
+

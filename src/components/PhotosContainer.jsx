@@ -25,8 +25,17 @@ const PhotosContainer = (props) => {
       {isMobile 
         ?
         <>
-          <Photo2/>
-          <Photo3/>
+          <div id='portrait' className='portrait'>
+            {props.currentPhoto == 'engaged-couple' ?
+              <>
+                <Photo2/>
+              </>
+              :
+              <>
+                <Photo1/>
+              </>
+            }
+          </div>
         </>
         :
           <Photo2/>
@@ -38,6 +47,7 @@ const PhotosContainer = (props) => {
 const mapSateToProps = (state) => {
   return {
     windowSize: state.windowSize,
+    currentPhoto: state.currentPhoto
   }
 }
 

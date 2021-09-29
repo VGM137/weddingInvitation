@@ -17,3 +17,8 @@ export const windowResize = (payload) => ({
   type: "PHOTO_SIZE",
   payload 
  });
+
+ export const displayPhoto = (payload) => ({
+  type: "DISPLAY_PHOTO",
+  payload 
+ });

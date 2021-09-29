@@ -22,15 +22,15 @@ const Home = (props) => {
    }
 
   const handleScroll = (e) => {
-    console.log(e)
-    console.log(e.target.scrollTop)
+/*     console.log(e)
+    console.log(e.target.scrollTop) */
     let carousel = document.getElementById('carousel')
     let infoContainer = document.getElementById('info-container')
     let hero = document.getElementById('hero')
-    console.log(hero.clientHeight)
+/*     console.log(hero.clientHeight) */
 
       let overflow = e.target.scrollHeight-e.target.offsetHeight
-      console.log(overflow)
+/*       console.log(overflow) */
       if(overflow-5 <= e.target.scrollTop){
         carousel.style.overflow = 'scroll'
         carousel.style.display = 'block'

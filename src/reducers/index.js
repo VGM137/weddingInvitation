@@ -26,6 +26,12 @@ const reducer = (state, action) => {
         photoContainer: action.payload
       }
 
+      case "DISPLAY_PHOTO":
+      return {
+        ...state,
+        currentPhoto: action.payload
+      }
+
     default :
     return state;
   }
