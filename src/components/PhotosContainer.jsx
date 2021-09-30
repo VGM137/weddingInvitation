@@ -14,6 +14,7 @@ import '../assets/styles/components/PhotosContainer.scss'
 const PhotosContainer = (props) => {
 
   let isMobile = props.windowSize.width < 768
+  let isFirstPhoto = props.currentPhoto == '' || props.currentPhoto == 'engaged-couple'
 
   const handleLoad = (e) => {
       console.log(e)
@@ -22,17 +23,13 @@ const PhotosContainer = (props) => {
 
   return(
     <div id='photos-container' className='photos-container' onLoad={(e) => handleLoad(e)}>
-      {isMobile 
+      {isMobile
         ?
         <>
           <div id='portrait' className='portrait'>
-            {props.currentPhoto == 'engaged-couple' ?
+            {isFirstPhoto &&
               <>
                 <Photo2/>
-              </>
-              :
-              <>
-                <Photo1/>
               </>
             }
           </div>
