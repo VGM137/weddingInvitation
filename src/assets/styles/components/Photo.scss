@@ -1,13 +1,36 @@
 .photo-container{
-  width: 100%;
+  width: auto;
   display: inline-flex;
-  height: auto;
+  max-height: 90%;
+  margin: auto;
+  animation-name: grow;
+  animation-duration: 2s;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
 }
 .photo{
   max-width: 960px;
   width: 100%;
-  height: auto;
+  height: 100%;
   margin: 0 auto;
+  box-shadow: 0px 0px 11px 3px rgba(0, 0, 0, .2);
+  
+}
+
+@keyframes grow {
+  from {
+    transform: scale(0.9)
+  }
+  to {
+    transform: scale(1)
+  }
+}
+
+.photoOne{
+  filter: brightness(.8);
+  z-index: 0;
 }
 
 @media screen and (max-width: 767px){
@@ -15,6 +38,10 @@
     width: 100%;
     display: inline-flex;
     height: fit-content;
+    margin: 0;
+  }
+  .photoOne-container{
+    border-radius: 0;
   }
   .photo{
     max-width: 960px;

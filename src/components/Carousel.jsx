@@ -17,7 +17,7 @@ const Carousel = (props) => {
     id='carousel' 
     className='carousel' 
     onScroll={handleScroll} 
-    style={isMobile ? {height: `${props.photoContainer}px`, paddingTop: `${props.hero}px`} : {height: `${props.home}px`, paddingTop: `${props.hero}px`}}>
+    style={isMobile ? {height: `${props.photoContainer}px`, paddingTop: `${props.hero}px`} : {height: `100vh`, paddingTop: `100vh`}}>
       <InfoContainer/>
     </div>
   )

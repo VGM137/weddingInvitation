@@ -15,28 +15,69 @@ const PhotosContainer = (props) => {
 
   let isMobile = props.windowSize.width < 768
   let isFirstPhoto = props.currentPhoto == '' || props.currentPhoto == 'engaged-couple'
+  let isSecondPhoto = props.currentPhoto == 'parents'
+  let isThirdPhoto = props.currentPhoto == 'good-parents'
+  let isFourthPhoto = props.currentPhoto == 'ladies'
+  let isFifthPhoto = props.currentPhoto == 'grooms'
+  let isSixthPhoto = props.currentPhoto == 'event'
+  let isSeventhPhoto = props.currentPhoto == 'other'
 
+
+  
+  
+  
   const handleLoad = (e) => {
       console.log(e)
-      props.photoContainerSize(e.target.offsetParent.clientHeight)
+      console.log(e.target.parentElement.parentElement)
+      props.photoContainerSize(e.target.parentElement.parentElement.clientHeight)
   }
 
   return(
-    <div id='photos-container' className='photos-container' onLoad={(e) => handleLoad(e)}>
-      {isMobile
+    <div id='photos-container' className='photos-container' >
+      {/* {isMobile
         ?
-        <>
-          <div id='portrait' className='portrait'>
+        <> */}
+          <div id='portrait' className='portrait' onLoad={(e) => handleLoad(e)}>
             {isFirstPhoto &&
               <>
                 <Photo2/>
               </>
             }
+            {isSecondPhoto &&
+              <>
+                <Photo3/>
+              </>
+            }
+            {isThirdPhoto &&
+              <>
+                <Photo4/>
+              </>
+            }
+            {isFourthPhoto &&
+              <>
+                <Photo5/>
+              </>
+            }
+            {isFifthPhoto &&
+              <>
+                <Photo6/>
+              </>
+            }
+            {isSixthPhoto &&
+              <>
+                <Photo7/>
+              </>
+            }
+            {isSeventhPhoto &&
+              <>
+                <Photo7/>
+              </>
+            }
           </div>
-        </>
+{/*         </>
         :
           <Photo2/>
-      }
+      } */}
     </div>
   )
 }

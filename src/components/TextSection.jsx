@@ -14,11 +14,18 @@ const TextSection = ({specific, children}) => {
     if(entry.isIntersecting){
       dispatch(displayPhoto(entry.target.classList[1]))
       console.log(entry)
-      let children = entry.target.childNodes 
-      children.forEach(child => child.classList.add('visible'))
-      setTimeout(() => {
-        children.forEach(child => child.classList.remove('visible'))
-      }, 2000);
+      let children = entry.target.childNodes[0].childNodes
+      if(entry.target.classList[1] !== 'event'){
+        children.forEach(child => child.classList.add('fadeUp'))
+        setTimeout(() => {
+          children.forEach(child => child.classList.remove('fadeUp'))
+        }, 2000);
+      }else{
+        children.forEach(child => child.classList.add('fadeDown'))
+        setTimeout(() => {
+          children.forEach(child => child.classList.remove('fadeDown'))
+        }, 2000);
+      }
     }
 
     setVisible(entry.isIntersecting)
@@ -28,14 +35,14 @@ const TextSection = ({specific, children}) => {
     return {
       root:null,
       rootMargin: '0px',
-      threshold: .3
+      threshold: .9
     }
   }, [])
 
   useEffect(() => {
     const observer = new IntersectionObserver(callbackFunction, options)
     const currentTarget = targetRef.current
-/*     console.log(currentTarget) */
+    console.log(currentTarget.target)
       
     if(currentTarget) observer.observe(currentTarget)
 
@@ -51,7 +58,9 @@ const TextSection = ({specific, children}) => {
       className={`text-section ${specific}`}
       ref={targetRef}
     >
-      {children}
+      <div id='text-container' className={`text-container ${specific}`}>
+        {children}
+      </div>
     </div>
   )
 }

@@ -1,8 +1,36 @@
 .hero{
   width: 100%;
-  height: auto;
+  height: 100vh;
   display: flex;
+  position: relative;
 }
+.hero-text{
+  font-family: Ephesis,cursive;
+  font-size: 5em;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  justify-content: center;
+  display: none;
+  flex-direction: column;
+  color: #E6E6E6;
+  animation-name: apear;
+  animation-duration: 4s;
+  z-index: 1;
+}
+@keyframes apear {
+  from {
+    transform: scale(0.9);
+    opacity: 0
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
 .hero-img{
   width: auto;
   height: 100%;
@@ -11,5 +39,8 @@
 @media screen and (max-width: 767px){
   .hero{
     height: fit-content;
+  }
+  .hero-text{
+    font-size: 3em;
   }
 }
