@@ -57,24 +57,11 @@
   width: 80%;
 }
 
-.fadeUp{
-  animation-name: fadeUp;
-  animation-duration: 2s;
-}
-.fadeDown{
-  animation-name: fadeDown;
-  animation-duration: 2s;
-}
-@keyframes fadeUp {
-  from {margin-top: 100px;}
-  to {margin-top: 10px;}
-}
-@keyframes fadeDown {
-  from {margin-bottom: 100px;}
-  to {margin-bottom: 10px;}
-}
 .pre-text{
   font-size: 1.5em;
+  margin-top: 10px;
+  animation-name: fadeUp;
+  animation-duration: 2s;
 }
 .engaged-couple{
 /*   border-bottom-left-radius: 10px;
@@ -143,6 +130,24 @@
 .deco-date-img{
   width: 100%;
   margin: auto;
+}
+
+
+.fadeUp{
+  animation-name: fadeUp;
+  animation-duration: 2s;
+}
+.fadeDown{
+  animation-name: fadeDown;
+  animation-duration: 2s;
+}
+@keyframes fadeUp {
+  from {margin-top: 100px;}
+  to {margin-top: 10px;}
+}
+@keyframes fadeDown {
+  from {margin-bottom: 100px;}
+  to {margin-bottom: 10px;}
 }
 
 @media screen and (max-width: 767px){
