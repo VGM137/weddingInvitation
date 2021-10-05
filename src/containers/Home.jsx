@@ -52,7 +52,7 @@ const Home = (props) => {
       onScroll={handleScroll} 
       onLoad={handleLoad}
     >
-      <Hero/>
+      
       <PhotosContainer/>
       <Carousel/>
     </section>

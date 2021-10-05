@@ -14,7 +14,8 @@ import '../assets/styles/components/PhotosContainer.scss'
 const PhotosContainer = (props) => {
 
   let isMobile = props.windowSize.width < 768
-  let isFirstPhoto = props.currentPhoto == '' || props.currentPhoto == 'engaged-couple'
+  let isHero = props.currentPhoto == '' || props.currentPhoto == 'hero'
+  let isFirstPhoto = props.currentPhoto == 'engaged-couple'
   let isSecondPhoto = props.currentPhoto == 'parents'
   let isThirdPhoto = props.currentPhoto == 'good-parents'
   let isFourthPhoto = props.currentPhoto == 'ladies'
@@ -38,6 +39,11 @@ const PhotosContainer = (props) => {
         ?
         <> */}
           <div id='portrait' className='portrait' onLoad={(e) => handleLoad(e)}>
+            {isHero &&
+              <>
+                <Photo7/>
+              </>
+            }
             {isFirstPhoto &&
               <>
                 <Photo2/>

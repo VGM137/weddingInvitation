@@ -1,5 +1,6 @@
 import React, {useRef, useState, useMemo, useEffect}  from "react";
 import { connect } from "react-redux";
+import Hero from "./Hero";
 import TextSection from "./TextSection";
 import engagedPhoto from '../assets/static/engaged-photo.png'
 import rings from '../assets/static/rings.png'
@@ -20,10 +21,13 @@ const InfoContainer = (props) => {
     <div 
       id='info-container' 
       className='info-container' 
-      style={isMobile ? {marginTop: `${props.hero}px`} : {marginTop: `100vh`}} 
+      /* style={isMobile ? {marginTop: `${props.hero}px`} : {marginTop: `100vh`}}  */
     >
 {/*       {isVisible
         ? */}
+          <TextSection specific='hero'>
+            <Hero/>
+          </TextSection>
           <TextSection specific='engaged-couple'>
             <div id='info-engaged-img-container' 
               className='info-engaged-img-container'>

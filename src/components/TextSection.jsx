@@ -19,6 +19,10 @@ const TextSection = ({specific, children}) => {
     if(intersectionRatio == 1){
       doAnimate = false
     }
+
+    if(entry.target.classList[1] == 'hero'){
+      entry.target.childNodes[0].style.display = 'block'
+    }
     
     if(entry.target.classList[1] == 'engaged-couple' && intersectionRatio == .9){
       entry.target.parentElement.parentElement.parentElement.childNodes[1].style.bottom= ''
@@ -30,13 +34,13 @@ const TextSection = ({specific, children}) => {
         dispatch(displayPhoto(entry.target.classList[1]))
         console.log(entry)
         let children = entry.target.childNodes[0].childNodes
-        if(entry.target.classList[1] !== 'event'){
+        if(entry.target.classList[1] !== 'event' && entry.target.classList[1] !== 'hero'){
           entry.target.childNodes[0].style.display = 'block'
           children.forEach(child => child.classList.add('fadeUp'))
           setTimeout(() => {
             children.forEach(child => child.classList.remove('fadeUp'))
           }, 2200);
-        }else{
+        }else if(entry.target.classList[1] !== 'hero'){
           entry.target.childNodes[0].style.display = 'block'
           children.forEach(child => child.classList.add('fadeDown'))
           setTimeout(() => {

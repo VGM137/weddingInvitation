@@ -1,8 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
-import '../assets/styles/components/Carousel.scss'
-import PhotosContainer from "./PhotosContainer";
 import InfoContainer from "./InfoContainer";
+import Hero from "./Hero";
+import '../assets/styles/components/Carousel.scss'
 
 const Carousel = (props) => {
 
@@ -17,7 +17,8 @@ const Carousel = (props) => {
     id='carousel' 
     className='carousel' 
     onScroll={handleScroll} 
-    style={isMobile ? {height: `${props.photoContainer}px`, paddingTop: `${props.hero}px`} : {height: `100vh`, paddingTop: `100vh`}}>
+    /* style={isMobile ? {height: `${props.photoContainer}px`, paddingTop: `${props.hero}px`} : {height: `100vh`, paddingTop: `100vh`}} */>
+      
       <InfoContainer/>
     </div>
   )
