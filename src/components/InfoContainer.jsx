@@ -16,17 +16,14 @@ const InfoContainer = (props) => {
   let isMobile = props.windowSize.width < 768
   let isVisible = props.currentPhoto == 'engaged-couple'
   
-
-
-
   return (
     <div 
       id='info-container' 
       className='info-container' 
       style={isMobile ? {marginTop: `${props.hero}px`} : {marginTop: `100vh`}} 
     >
-      {isVisible
-        ?
+{/*       {isVisible
+        ? */}
           <TextSection specific='engaged-couple'>
             <div id='info-engaged-img-container' 
               className='info-engaged-img-container'>
@@ -40,16 +37,18 @@ const InfoContainer = (props) => {
             <h2 id='secondary-text' className='secondary-text'>
               {`Jazmín Adriana 
                 Flores Santana`}</h2>
-            <img id='engaged-rings' className='engaged-rings' src={rings} />
+            <div id='engaged-rings-container' className='engaged-rings-container'>
+              <img id='engaged-rings' className='engaged-rings' src={rings} />
+            </div>
             <h2 id='secondary-text' className='secondary-text'>
               {`José Rodrigo 
                 Vallejo Hernández`}</h2>
           </TextSection>
-        :
+{/*         :
           <TextSection specific='engaged-couple pre-text'>
             <h1 id='main-text' className='main-text'>¡Queremos que nos acompañes!</h1>
           </TextSection>
-      }
+      } */}
     
       <TextSection specific='parents'>
         <h1 id='main-text' className='main-text'>Nuestros padres:</h1>

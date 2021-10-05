@@ -24,20 +24,23 @@
   width: 0;
 }
 .text-container{
-  height: 90%;
   margin: auto;
   width: 100%;
   justify-content: center;
   white-space: pre-line;
-  display: grid;
+  display: none;
   grid-template-columns: 100%;
+  max-height: 100%;
+  padding: 10px 0;
+  box-sizing: border-box;
+  overflow: hidden;
 }
-.text-container:before {
+/* .text-container:before {
   content: "";
   display: inline-block;
   vertical-align: middle;
   height: 100%;
-}
+} */
 .main-text{
   font-size: 2.2em;
   margin: 10px auto;
@@ -91,6 +94,11 @@
 .info-engaged-img{
   height: 100%;
   width: auto;
+}
+.engaged-rings-container{
+  height: auto;
+  margin: 10px auto;
+  width: max-content;
 }
 .engaged-rings{
   height: 80px;
