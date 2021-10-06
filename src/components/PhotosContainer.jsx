@@ -8,7 +8,7 @@ import Photo4 from "./Photo4";
 import Photo5 from "./Photo5";
 import Photo6 from "./Photo6";
 import Photo7 from "./Photo7";
-import Carousel from "./Carousel";
+import PhotoFooter from "./PhotoFooter";
 import '../assets/styles/components/PhotosContainer.scss'
 
 const PhotosContainer = (props) => {
@@ -70,6 +70,9 @@ const PhotosContainer = (props) => {
             <Photo7/>
           </>
         }
+      </div>
+      <div id='photo-footer-container' className='photo-footer-container'>
+
       </div>
     </div>
   )

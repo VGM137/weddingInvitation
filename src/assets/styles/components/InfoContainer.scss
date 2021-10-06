@@ -99,11 +99,12 @@
   height: auto;
   margin: 10px auto;
   width: max-content;
+  max-width: 90%;
 }
 .engaged-rings{
   height: 80px;
   margin: 10px auto;
-  width: max-content;
+  width: fit-content;
 }
 .parents{
   /* border-radius: 10px; */
