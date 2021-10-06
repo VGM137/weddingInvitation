@@ -1,8 +1,8 @@
 import React from 'react';
+import { useParams } from 'react-router';
 import { connect } from 'react-redux'
 import { windowResize, homeSize } from '../actions';
 import Carousel from '../components/Carousel';
-import Hero from '../components/Hero';
 import PhotosContainer from '../components/PhotosContainer';
 import '../assets/styles/components/Home.scss'
 

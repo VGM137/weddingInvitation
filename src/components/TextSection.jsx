@@ -14,7 +14,6 @@ const TextSection = ({specific, children}) => {
   const callbackFunction = entries => {
     const [entry] = entries
     let intersectionRatio = Math.round(entry.intersectionRatio* 10)/10
-    console.log(intersectionRatio)
 
     if(intersectionRatio == 1){
       doAnimate = false
@@ -26,13 +25,11 @@ const TextSection = ({specific, children}) => {
     
     if(entry.target.classList[1] == 'engaged-couple' && intersectionRatio == .9){
       entry.target.parentElement.parentElement.parentElement.childNodes[1].style.bottom= ''
-      console.log(entry.target.parentElement.parentElement.parentElement.childNodes[1])
     }
 
     if(doAnimate == true){
       if(intersectionRatio == 0.2){
         dispatch(displayPhoto(entry.target.classList[1]))
-        console.log(entry)
         let children = entry.target.childNodes[0].childNodes
         if(entry.target.classList[1] !== 'event' && entry.target.classList[1] !== 'hero'){
           entry.target.childNodes[0].style.display = 'block'
@@ -82,7 +79,6 @@ const TextSection = ({specific, children}) => {
   useEffect(() => {
     const observer = new IntersectionObserver(callbackFunction, options)
     const currentTarget = targetRef.current
-    console.log(currentTarget.target)
       
     if(currentTarget) observer.observe(currentTarget)
 

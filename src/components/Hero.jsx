@@ -10,14 +10,6 @@ const Hero = (props) => {
     props.heroSize(e.target.parentElement.parentElement.clientHeight)
     let text = await e.target.parentElement.parentElement.childNodes[0]
     text.style.display = 'flex'
-/*     
-    console.log(e.target.parentElement.parentElement.childNodes)
-    let marginLeft = text.clientWidth 
-    let marginTop = text.clientHeight
-    console.log(marginLeft)
-    console.log(marginTop)
-    text.style.marginTop = `-${marginTop}px`
-    text.style.marginLeft = `-${marginLeft}px` */
   }
   
   return(

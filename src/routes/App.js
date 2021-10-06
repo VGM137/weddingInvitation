@@ -6,6 +6,7 @@ const App = () => (
   <HashRouter>
     <Switch>
       <Route exact path = '/' component={Home}/>
+      <Route path="/:id" component={Home} />
     </Switch>
   </HashRouter>
 )

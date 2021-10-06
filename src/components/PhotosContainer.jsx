@@ -23,67 +23,54 @@ const PhotosContainer = (props) => {
   let isSixthPhoto = props.currentPhoto == 'event'
   let isSeventhPhoto = props.currentPhoto == 'other'
 
-
-  
-  
-  
   const handleLoad = (e) => {
-      console.log(e)
-      console.log(e.target.parentElement.parentElement)
       props.photoContainerSize(e.target.parentElement.parentElement.clientHeight)
   }
 
   return(
     <div id='photos-container' className='photos-container' >
-      {/* {isMobile
-        ?
-        <> */}
-          <div id='portrait' className='portrait' onLoad={(e) => handleLoad(e)}>
-            {isHero &&
-              <>
-                <Photo7/>
-              </>
-            }
-            {isFirstPhoto &&
-              <>
-                <Photo2/>
-              </>
-            }
-            {isSecondPhoto &&
-              <>
-                <Photo3/>
-              </>
-            }
-            {isThirdPhoto &&
-              <>
-                <Photo4/>
-              </>
-            }
-            {isFourthPhoto &&
-              <>
-                <Photo5/>
-              </>
-            }
-            {isFifthPhoto &&
-              <>
-                <Photo6/>
-              </>
-            }
-            {isSixthPhoto &&
-              <>
-                <Photo7/>
-              </>
-            }
-            {isSeventhPhoto &&
-              <>
-                <Photo7/>
-              </>
-            }
-          </div>
-{/*         </>
-        :
-          <Photo2/>
-      } */}
+      <div id='portrait' className='portrait' onLoad={(e) => handleLoad(e)}>
+        {isHero &&
+          <>
+            <Photo7/>
+          </>
+        }
+        {isFirstPhoto &&
+          <>
+            <Photo2/>
+          </>
+        }
+        {isSecondPhoto &&
+          <>
+            <Photo3/>
+          </>
+        }
+        {isThirdPhoto &&
+          <>
+            <Photo4/>
+          </>
+        }
+        {isFourthPhoto &&
+          <>
+            <Photo5/>
+          </>
+        }
+        {isFifthPhoto &&
+          <>
+            <Photo6/>
+          </>
+        }
+        {isSixthPhoto &&
+          <>
+            <Photo7/>
+          </>
+        }
+        {isSeventhPhoto &&
+          <>
+            <Photo7/>
+          </>
+        }
+      </div>
     </div>
   )
 }

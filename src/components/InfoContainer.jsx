@@ -1,7 +1,8 @@
-import React, {useRef, useState, useMemo, useEffect}  from "react";
+import React from "react";
 import { connect } from "react-redux";
 import Hero from "./Hero";
 import TextSection from "./TextSection";
+import PersonalInvitation from "./PersonalInvitation";
 import engagedPhoto from '../assets/static/engaged-photo.png'
 import rings from '../assets/static/rings.png'
 import theme1 from '../assets/static/theme1.png'
@@ -21,39 +22,32 @@ const InfoContainer = (props) => {
     <div 
       id='info-container' 
       className='info-container' 
-      /* style={isMobile ? {marginTop: `${props.hero}px`} : {marginTop: `100vh`}}  */
     >
-{/*       {isVisible
-        ? */}
-          <TextSection specific='hero'>
-            <Hero/>
-          </TextSection>
-          <TextSection specific='engaged-couple'>
-            <div id='info-engaged-img-container' 
-              className='info-engaged-img-container'>
-              <img 
-                id='info-engaged-img' 
-                className='info-engaged-img' 
-                src={engagedPhoto} 
-                alt="Novios" />
-            </div>
-            <h1 id='main-text' className='main-text'>Novios:</h1>
-            <h2 id='secondary-text' className='secondary-text'>
-              {`Jazmín Adriana 
-                Flores Santana`}</h2>
-            <div id='engaged-rings-container' className='engaged-rings-container'>
-              <img id='engaged-rings' className='engaged-rings' src={rings} />
-            </div>
-            <h2 id='secondary-text' className='secondary-text'>
-              {`José Rodrigo 
-                Vallejo Hernández`}</h2>
-          </TextSection>
-{/*         :
-          <TextSection specific='engaged-couple pre-text'>
-            <h1 id='main-text' className='main-text'>¡Queremos que nos acompañes!</h1>
-          </TextSection>
-      } */}
-    
+      <TextSection specific='hero'>
+        <Hero/>
+      </TextSection>
+
+      <TextSection specific='engaged-couple'>
+        <div id='info-engaged-img-container' 
+          className='info-engaged-img-container'>
+          <img 
+            id='info-engaged-img' 
+            className='info-engaged-img' 
+            src={engagedPhoto} 
+            alt="Novios" />
+        </div>
+        <h1 id='main-text' className='main-text'>Novios:</h1>
+        <h2 id='secondary-text' className='secondary-text'>
+          {`Jazmín Adriana 
+            Flores Santana`}</h2>
+        <div id='engaged-rings-container' className='engaged-rings-container'>
+          <img id='engaged-rings' className='engaged-rings' src={rings} />
+        </div>
+        <h2 id='secondary-text' className='secondary-text'>
+          {`José Rodrigo 
+            Vallejo Hernández`}</h2>
+      </TextSection>
+
       <TextSection specific='parents'>
         <h1 id='main-text' className='main-text'>Nuestros padres:</h1>
         <h2 id='secondary-text' className='secondary-text'>
@@ -141,6 +135,9 @@ const InfoContainer = (props) => {
         <h1 id='main-text' className='main-text'>Horario:</h1>
         <h2 id='secondary-text' className='secondary-text'>3:30pm</h2>
       </TextSection>
+
+      <PersonalInvitation />
+
     </div>
   )
 }
