@@ -1,8 +1,8 @@
-import React, {useRef, useState, useMemo, useEffect}  from "react";
+import React, {useRef, useState, useMemo, useEffect} from "react";
 import { connect, useSelector, useDispatch  } from "react-redux";
 import { displayPhoto } from "../actions";
 
-const TextSection = ({specific, children}) => {
+const TextSection = ({specific, childrenSpecific, children}) => {
 
   const dispatch = useDispatch()
 
@@ -94,7 +94,7 @@ const TextSection = ({specific, children}) => {
       className={`text-section ${specific}`}
       ref={targetRef}
     >
-      <div id='text-container' className={`text-container ${specific}`}>
+      <div id='text-container' className={`text-container ${childrenSpecific}`}>
         {children}
       </div>
     </div>

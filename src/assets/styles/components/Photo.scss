@@ -11,7 +11,6 @@
   transform: scale(1.1)
 }
 .photo{
-  max-width: 960px;
   width: 100%;
   height: 100%;
   margin: 0 auto;
@@ -45,12 +44,12 @@
 }
 
 @media screen and (max-width: 769px){
-  .photoOne-container{
+  .photoOne-container, .photoSeven-container{
     border-radius: 0;
     height: 100vh;
     margin: 0;
   }
-  .photoOne{
+  .photoOne, .photoSeven{
     height: 100%;
     width: auto;
   }

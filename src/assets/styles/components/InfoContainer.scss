@@ -1,6 +1,6 @@
 .info-container{
   display: grid;
-  grid-template-columns: repeat(max(7),100vw);
+  grid-template-columns: repeat(max(8),100vw);
   grid-template-rows: 100%;
   height: 100%;
   width: 100%;
@@ -9,6 +9,21 @@
   grid-gap: 100vw;
   color: #E6E6E6;
   overflow-y: hidden;
+}
+.info-container::-webkit-scrollbar{
+  height: 12px;
+  border-radius: 6px;
+}
+.info-container::-webkit-scrollbar-track{
+  background: rgba(211, 211, 211, 1);
+  border-radius: 6px;
+}
+.info-container::-webkit-scrollbar-thumb{
+  background: rgba(128, 128, 128, .5);
+  border-radius: 6px;
+}
+.info-container:hover::-webkit-scrollbar-thumb{
+  background: rgba(128, 128, 128, .8);
 }
 .text-section{
   display: flex;
@@ -44,7 +59,7 @@
   height: 100%;
 } */
 .main-text{
-  font-size: 2.2em;
+  font-size: 2.5em;
   margin: 10px auto;
   font-family: 'Ephesis', cursive;
   display: inline-block;
@@ -53,7 +68,7 @@
 }
 .secondary-text{
   max-width: 90%;
-  font-size: 1.2em;
+  font-size: 1.5em;
   margin: 10px auto;
   font-family: 'Montserrat', sans-serif;
   font-weight: 200;
@@ -78,10 +93,8 @@
 .info-engaged-img-container{
   width: 100%;
   height: 200px;
-  border-radius: 70px;
   overflow: hidden;
   margin: 10px auto;
-/*   display: flex; */
   justify-content: center;
   align-items: center;
   display: inline-block;
@@ -94,13 +107,13 @@
 .engaged-rings-container{
   height: auto;
   margin: 10px auto;
-  width: max-content;
+  width: auto;
   max-width: 90%;
 }
 .engaged-rings{
-  height: 80px;
+  height: auto;
   margin: 10px auto;
-  width: fit-content;
+  width: 120px;
 }
 .parents{
   /* border-radius: 10px; */
@@ -115,13 +128,17 @@
   /* border-radius: 10px; */
 }
 .event{
-/*   border-top-left-radius: 10px;
-  border-top-right-radius: 10px; */
+ width: 50%;
+ box-sizing: border-box;
+ height: 90%;
+}
+.text-container-event{
+  width: 100%;
 }
 .deco-element-container{
   display: flex;
   margin: 10px auto;
-  width: 30%;
+  width: 35%;
 }
 .deco-element-img{
   width: 100%;
@@ -130,7 +147,7 @@
 .deco-date-container{
   display: flex;
   margin: 10px auto;
-  width: 45%;
+  width: 70%;
 }
 .deco-date-img{
   width: 100%;
@@ -147,22 +164,48 @@
   animation-duration: 2s;
 }
 
-@media screen and (max-width: 767px){
+
+@media screen and (max-width: 769px){
+  .main-text{
+    font-size: 2.2em;
+  }
+  .secondary-text{
+    font-size: 1.2em;
+  }
   .deco-element-container{
     display: flex;
     margin: 10px auto;
-    width: 80%;
+    width: 45%;
   }
   .deco-date-container{
     display: flex;
     margin: 10px auto;
-    width: 85%;
+    width: 55%;
+  }
+  .text-container-event h1{
+    font-size: 2.2em;
+  }
+  .text-container-event h2{
+    font-size: 1.2em;
+  }
+  .event{
+    margin: auto;
+    width: 90%;
+    justify-content: center;
+    white-space: pre-line;
+    grid-template-columns: 100%;
+    padding: 10px 0;
+    box-sizing: border-box;
+    overflow: hidden;
   }
 }
 
-@media screen and (min-width: 1000px){
+@media screen and (max-width: 426px){
+  .deco-element-container{
+    width: 70%;
+  }
   .deco-date-container{
-    width: 35%;
+    width: 80%;
   }
 }
 

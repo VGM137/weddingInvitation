@@ -121,7 +121,7 @@ const InfoContainer = (props) => {
         </div>
       </TextSection>
 
-      <TextSection specific='event'>
+      <TextSection specific='event' childrenSpecific='text-container-event'>
         <div id='deco-date-container' className='deco-date-container'>
           <img 
             id='deco-date-img' 
