@@ -1,12 +1,14 @@
 .info-container{
   display: grid;
-  grid-template-rows: repeat(max(8),100vh);
+  grid-template-columns: repeat(max(7),100vw);
+  grid-template-rows: 100%;
   height: 100%;
   width: 100%;
   position: absolute;
   top: 0;
-  grid-gap: 100vh;
+  grid-gap: 100vw;
   color: #E6E6E6;
+  overflow-y: hidden;
 }
 .text-section{
   display: flex;
@@ -60,12 +62,6 @@
   width: 80%;
 }
 
-.pre-text{
-  font-size: 1.5em;
-  margin-top: 10px;
-  animation-name: fadeUp;
-  animation-duration: 2s;
-}
 .engaged-couple{
 /*   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px; */
@@ -80,7 +76,7 @@
   font-family: 'Ephesis', cursive;
 }
 .info-engaged-img-container{
-  width: auto;
+  width: 100%;
   height: 200px;
   border-radius: 70px;
   overflow: hidden;
@@ -150,14 +146,6 @@
   animation-name: fadeDown;
   animation-duration: 2s;
 }
-@keyframes fadeUp {
-  from {margin-top: 100px;}
-  to {margin-top: 10px;}
-}
-@keyframes fadeDown {
-  from {margin-bottom: 100px;}
-  to {margin-bottom: 10px;}
-}
 
 @media screen and (max-width: 767px){
   .deco-element-container{
@@ -170,5 +158,20 @@
     margin: 10px auto;
     width: 85%;
   }
+}
+
+@media screen and (min-width: 1000px){
+  .deco-date-container{
+    width: 35%;
+  }
+}
+
+@keyframes fadeUp {
+  from {margin-top: 100px;}
+  to {margin-top: 10px;}
+}
+@keyframes fadeDown {
+  from {margin-bottom: 100px;}
+  to {margin-bottom: 10px;}
 }
 

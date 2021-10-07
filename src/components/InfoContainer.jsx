@@ -23,10 +23,9 @@ const InfoContainer = (props) => {
       id='info-container' 
       className='info-container' 
     >
-      <TextSection specific='hero'>
-        <Hero/>
-      </TextSection>
-
+      
+      <Hero/>
+      
       <TextSection specific='engaged-couple'>
         <div id='info-engaged-img-container' 
           className='info-engaged-img-container'>
