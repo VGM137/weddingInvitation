@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import Hero from "./Hero";
 import TextSection from "./TextSection";
 import PersonalInvitation from "./PersonalInvitation";
+import ScrollButtons from "./ScrollButtons";
 import engagedPhoto from '../assets/static/engaged-photo.png'
 import rings from '../assets/static/rings.png'
 import theme1 from '../assets/static/theme1.png'
@@ -23,6 +24,8 @@ const InfoContainer = (props) => {
       id='info-container' 
       className='info-container' 
     >
+
+      <ScrollButtons/>
       
       <Hero/>
       
