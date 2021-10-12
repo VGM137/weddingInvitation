@@ -5,10 +5,7 @@ import { createStore } from 'redux';
 import { scrollingMonth } from './actions';
 import reducer from './reducers';
 import App from './routes/App.js';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 
-AOS.init()
 
 const initialState = {
   windowSize: {
@@ -19,6 +16,7 @@ const initialState = {
   home:'',
   photoContainer: '',
   currentPhoto: '',
+  isPersonalInvitation: false,
 }
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()

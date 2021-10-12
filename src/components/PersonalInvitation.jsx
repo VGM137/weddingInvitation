@@ -1,9 +1,11 @@
 import React, {useRef, useState, useMemo, useEffect} from "react";
 import { connect } from "react-redux";
 import { useParams } from "react-router";
+import { displayPhoto, isPersonalInvitation } from "../actions";
+import Frame from "./Frame";
 import '../assets/styles/components/PersonalInvitation.scss'
 
-const PersonalInvitation = () => {
+const PersonalInvitation = (props) => {
   
   let { id } = useParams();
   let invitationName
@@ -30,6 +32,7 @@ const PersonalInvitation = () => {
     let paramsInput = id.toString()
     invited.forEach(invited => {
       if(paramsInput == invited.params){
+        props.isPersonalInvitation(true)
         invitationName = invited
       }
     })
@@ -50,11 +53,21 @@ const PersonalInvitation = () => {
 
     if(doAnimate == true){
       if(intersectionRatio == 0.2){
+        console.log(entry.target.classList[1])
+        props.displayPhoto(entry.target.classList[0])
         let children = entry.target.childNodes[0].childNodes
           entry.target.childNodes[0].style.display = 'block'
-          children.forEach(child => child.classList.add('fadeUp'))
+          children.forEach(child => {
+            if(child.classList[0] == 'frame-container'){
+              child.classList.add('apear')
+            }else{
+              child.classList.add('fadeUp')}
+            })
           setTimeout(() => {
-            children.forEach(child => child.classList.remove('fadeUp'))
+            children.forEach(child => {
+              child.classList.remove('fadeUp')
+              child.classList.remove('apear')
+            })
           }, 2200);
       }
     }
@@ -106,6 +119,7 @@ const PersonalInvitation = () => {
       ?
         <div id='personal-invitation' className='personal-invitation' ref={targetRef}>
           <div id='ticket' className='ticket'>
+            <Frame specific={'invitation-frame'} />
             <h1 id='ticket-main-text' className='ticket-main-text'>{`Hola ${invitationName.name}`}</h1>
             <h2 id='ticket-secondary-text' className='ticket-secondary-text'>Estamos muy felices por la celebración de nuestra unión y nos encantaría que nos acompañes.</h2>
           
@@ -130,4 +144,9 @@ const PersonalInvitation = () => {
   )
 }
 
-export default connect(null, null)(PersonalInvitation)
+const dispatchStateToProps = {
+  displayPhoto,
+  isPersonalInvitation
+}
+
+export default connect(null, dispatchStateToProps)(PersonalInvitation)

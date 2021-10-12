@@ -1,8 +1,16 @@
 import React from "react";
-import { connect } from "react-redux";
+import { connect, useSelector } from "react-redux";
 import '../assets/styles/components/ScrollButtons.scss'
 
 const ScrollButton = ({specific}) => {
+
+  const currentPhoto = useSelector(state => state.currentPhoto)
+  const isPersonalInvitation = useSelector(state => state.isPersonalInvitation)
+  let isTheMiddle =   currentPhoto == 'engaged-couple' || currentPhoto == 'parents' || currentPhoto == 'good-parents' || currentPhoto == 'ladies' || currentPhoto == 'grooms'
+  let isTheMiddleWithInvitation =   currentPhoto == 'engaged-couple' || currentPhoto == 'parents' || currentPhoto == 'good-parents' || currentPhoto == 'ladies' || currentPhoto == 'grooms' || currentPhoto == 'event'
+  let isHero = currentPhoto == '' || currentPhoto == 'hero'
+  let isEvent = currentPhoto == 'event'
+  let isInvitation = currentPhoto == 'personal-invitation'
 
   const handleClick = (e, key) => {
     
@@ -13,15 +21,19 @@ const ScrollButton = ({specific}) => {
       : scrollTo.push(child.classList[1])
     )
 
-    let infoContainerPosition = e.target.parentElement.parentElement.scrollLeft
-    let infoContainerWidth = e.target.parentElement.parentElement.clientWidth
+    let infoContainerPosition = Math.ceil(e.target.parentElement.parentElement.scrollLeft)
+    let infoContainerWidth = Math.ceil(e.target.parentElement.parentElement.clientWidth)  
+    console.log(infoContainerWidth)
+    console.log(infoContainerPosition)
     let timesScrolled = infoContainerPosition / infoContainerWidth
 
     if(key == 'forward'){
-      let move = Math.floor(timesScrolled)
+      console.log(e.target.parentElement.parentElement.childNodes)
+      let move = Math.ceil(timesScrolled)
+      console.log(move)
 
       if(move == 0){
-        e.target.parentElement.parentElement.scrollLeft = infoContainerWidth*1
+        e.target.parentElement.parentElement.scrollLeft = infoContainerWidth
       }
       if(move == 1){
         let element = document.getElementsByClassName(scrollTo[2])
@@ -74,11 +86,9 @@ const ScrollButton = ({specific}) => {
     }else if(key = 'backward'){
       let move = Math.ceil(timesScrolled)
 
-      if(move == 0){
-        e.target.parentElement.parentElement.scrollLeft = 0
-      }
       if(move == 1){
-        e.target.parentElement.parentElement.scrollLeft = 0
+        let element = document.getElementsByClassName(scrollTo[1])
+        element[0].scrollIntoView({block: "end", behavior: "smooth", inline: 'center'})
       }
       if(move == 2){
         e.target.parentElement.parentElement.scrollLeft = infoContainerWidth
@@ -130,14 +140,62 @@ const ScrollButton = ({specific}) => {
 
   return (
     <div id='buttons-container' className='buttons-container'>
-      <button 
-        id='button-scroll-backward' 
-        className={`button button-scroll-backward ${specific}`} 
-        onClick={(e) => handleClick(e, 'backward')}></button>
-      <button 
-        id='button-scroll-forward' 
-        className={`button button-scroll-forward ${specific}`} 
-        onClick={(e) => handleClick(e, 'forward')}></button>
+      {!isPersonalInvitation &&
+        <>
+          {isHero &&
+            <button 
+              id='button-scroll-forward' 
+              className={`button button-scroll-forward ${specific}`} 
+              onClick={(e) => handleClick(e, 'forward')}></button>
+          }
+          {isTheMiddle &&
+            <>
+              <button 
+                id='button-scroll-forward' 
+                className={`button button-scroll-forward ${specific}`} 
+                onClick={(e) => handleClick(e, 'forward')}></button>
+              <button 
+                id='button-scroll-backward' 
+                className={`button button-scroll-backward ${specific}`} 
+                onClick={(e) => handleClick(e, 'backward')}></button>
+            </>
+          }
+          {isEvent &&
+            <button 
+              id='button-scroll-backward' 
+              className={`button button-scroll-backward ${specific}`} 
+              onClick={(e) => handleClick(e, 'backward')}></button>
+          }
+        </>
+      }
+      {isPersonalInvitation &&
+        <>
+          {isHero &&
+            <button 
+              id='button-scroll-forward' 
+              className={`button button-scroll-forward ${specific}`} 
+              onClick={(e) => handleClick(e, 'forward')}></button>
+          }
+          {isTheMiddleWithInvitation &&
+            <>
+              <button 
+                id='button-scroll-forward' 
+                className={`button button-scroll-forward ${specific}`} 
+                onClick={(e) => handleClick(e, 'forward')}></button>
+              <button 
+                id='button-scroll-backward' 
+                className={`button button-scroll-backward ${specific}`} 
+                onClick={(e) => handleClick(e, 'backward')}></button>
+            </>
+          }
+          {isInvitation &&
+            <button 
+              id='button-scroll-backward' 
+              className={`button button-scroll-backward ${specific}`} 
+              onClick={(e) => handleClick(e, 'backward')}></button>
+          }
+        </>
+      }
     </div>
   )
 }

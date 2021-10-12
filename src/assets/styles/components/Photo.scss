@@ -4,7 +4,7 @@
   max-height: 100%;
   margin: auto;
   animation-name: grow;
-  animation-duration: 2s;
+  animation-duration: 5s;
   overflow: hidden;
   align-items: center;
   justify-content: center;
@@ -22,8 +22,8 @@
   width: auto;
   display: inline-flex;
   margin: auto;
-  animation-name: grow;
-  animation-duration: 2s;
+  animation-name: growOne;
+  animation-duration: 1s;
   overflow: hidden;
   align-items: center;
   justify-content: center;
@@ -71,6 +71,16 @@
 }
 
 @keyframes grow {
+  from {
+    transform: scale(1);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+@keyframes growOne {
   from {
     transform: scale(1)
   }

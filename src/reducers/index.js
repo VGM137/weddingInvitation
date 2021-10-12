@@ -32,6 +32,12 @@ const reducer = (state, action) => {
         currentPhoto: action.payload
       }
 
+      case "PERSONAL_INVITATION":
+      return {
+        ...state,
+        isPersonalInvitation: action.payload
+      }
+
     default :
     return state;
   }

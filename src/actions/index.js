@@ -22,3 +22,8 @@ export const windowResize = (payload) => ({
   type: "DISPLAY_PHOTO",
   payload 
  });
+
+ export const isPersonalInvitation = (payload) => ({
+  type: "PERSONAL_INVITATION",
+  payload 
+ });

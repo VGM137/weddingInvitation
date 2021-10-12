@@ -115,22 +115,23 @@
   margin: 10px auto;
   width: 120px;
 }
-.parents{
-  /* border-radius: 10px; */
+/* .parents{
+  border-radius: 10px;
 }
 .good-parents{
-  /* border-radius: 10px; */
+  border-radius: 10px;
 }
 .ladies{
-  /* border-radius: 10px; */
+  border-radius: 10px;
 }
 .grooms{
-  /* border-radius: 10px; */
-}
+  border-radius: 10px;
+} */
 .event{
  width: 50%;
  box-sizing: border-box;
  height: 90%;
+ position: relative;
 }
 .text-container-event{
   width: 100%;
@@ -166,6 +167,7 @@
 
 
 @media screen and (max-width: 769px){
+
   .info-container::-webkit-scrollbar{
     height: 0;
   }
@@ -174,6 +176,13 @@
   }
   .secondary-text{
     font-size: 1.2em;
+  }
+  .frame-container{
+    bottom: 0;
+  }
+  .frame-corner{
+    width: 100%;
+    height: auto;
   }
   .deco-element-container{
     display: flex;

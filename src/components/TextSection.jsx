@@ -14,12 +14,15 @@ const TextSection = ({specific, childrenSpecific, children}) => {
   const callbackFunction = entries => {
     const [entry] = entries
     let intersectionRatio = Math.round(entry.intersectionRatio* 10)/10
+    /* console.log(entry) */
 
     if(intersectionRatio == 1){
       doAnimate = false
     }
 
     if(entry.target.classList[1] == 'hero'){
+      dispatch(displayPhoto(entry.target.classList[1]))
+      /* console.log(entry) */
       entry.target.childNodes[0].style.display = 'block'
     }
     
@@ -33,9 +36,17 @@ const TextSection = ({specific, childrenSpecific, children}) => {
         let children = entry.target.childNodes[0].childNodes
         if(entry.target.classList[1] !== 'event' && entry.target.classList[1] !== 'hero'){
           entry.target.childNodes[0].style.display = 'block'
-          children.forEach(child => child.classList.add('fadeUp'))
+          children.forEach(child => {
+            if(child.classList[0] == 'frame-container'){
+              child.classList.add('apear')
+            }else{
+              child.classList.add('fadeUp')}
+            })
           setTimeout(() => {
-            children.forEach(child => child.classList.remove('fadeUp'))
+            children.forEach(child => {
+              child.classList.remove('fadeUp')
+              child.classList.remove('apear')
+            })
           }, 2200);
         }else if(entry.target.classList[1] !== 'hero'){
           entry.target.childNodes[0].style.display = 'block'

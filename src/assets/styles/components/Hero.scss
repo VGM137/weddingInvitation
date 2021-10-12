@@ -18,24 +18,15 @@
   text-align: center;
   margin: auto;
   justify-content: center;
-  display: none;
+  display: flex;
   flex-direction: column;
   color: #E6E6E6;
-  animation-name: apear;
-  animation-duration: 4s;
   z-index: 1;
 }
-@keyframes apear {
-  from {
-    transform: scale(0.9);
-    opacity: 0
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
+.apear{
+  animation-name: apear;
+  animation-duration: 2s;
 }
-
 .hero-img{
   width: auto;
   height: 100%;
@@ -47,5 +38,16 @@
   }
   .hero-text{
     font-size: 3em;
+  }
+}
+
+@keyframes apear {
+  from {
+    transform: scale(0.9);
+    opacity: 0
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
   }
 }

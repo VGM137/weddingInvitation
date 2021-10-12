@@ -1,0 +1,78 @@
+.frame-container{
+  width: 100vw;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  position: absolute;
+  top: 0;
+  box-sizing: border-box;
+  bottom: 12px;
+}
+.event-frame{
+  width: auto;
+  bottom: auto;
+}
+.invitation-frame{
+  height: 100%;
+  width: 100%;
+  display: grid;
+}
+.frame-corner{
+  width: auto;
+  height: 100%;
+  margin: 10px;
+  box-sizing: border-box;
+}
+.corner-event-frame{
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 10px;
+}
+.corner-invitation-frame{
+  width: auto;
+  height: 100%;
+  margin: 0;
+  padding: 10px;
+}
+.top-left{
+  grid-column: 1/2;
+  grid-row: 1/2;
+  justify-self: start;
+  top: 0;
+  left: 0;
+}
+.top-right{
+  grid-column: 3/4;
+  grid-row: 1/2;
+  top: 0;
+  right: 0;
+  justify-self: flex-end;
+}
+.bottom-left{
+  grid-column: 1/2;
+  grid-row: 4/3;
+  bottom: 0;
+  left: 0;
+  align-self: flex-end;
+  justify-self: start;
+}
+.bottom-right{
+  grid-column: 3/4;
+  grid-row: 3/4;
+  bottom: 0;
+  right: 0;
+  align-self: flex-end;
+  justify-self: flex-end;
+}
+
+@media screen and (max-width: 769px){
+  .frame-container{
+    bottom: 0;
+  }
+  .frame-corner{
+    width: 100%;
+    height: auto;
+  }
+}
