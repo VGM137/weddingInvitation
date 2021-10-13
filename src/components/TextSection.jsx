@@ -50,9 +50,17 @@ const TextSection = ({specific, childrenSpecific, children}) => {
           }, 2200);
         }else if(entry.target.classList[1] !== 'hero'){
           entry.target.childNodes[0].style.display = 'block'
-          children.forEach(child => child.classList.add('fadeDown'))
+          children.forEach(child => {
+            if(child.classList[0] == 'frame-container'){
+              child.classList.add('apear')
+            }else{
+              child.classList.add('fadeDown')}
+            })
           setTimeout(() => {
-            children.forEach(child => child.classList.remove('fadeDown'))
+            children.forEach(child => {
+              child.classList.remove('fadeUp')
+              child.classList.remove('apear')
+            })
           }, 2200);
         }
       }

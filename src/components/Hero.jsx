@@ -5,6 +5,8 @@ import Photo1 from "./Photo1";
 import '../assets/styles/components/Hero.scss'
 
 const Hero = (props) => {
+
+  let invitation = props.isPersonalInvitation
   
   const handleLoad = async (e) => {
     props.heroSize(e.target.parentElement.parentElement.clientHeight)
@@ -86,10 +88,24 @@ const Hero = (props) => {
   
   return(
     <div id='hero' className='hero' onLoad={handleLoad} ref={targetRef}>
-      <h1 id='hero-text' className='hero-text apear'>¡Nos casamos!</h1>
+      <div id='hero-text-container' className='hero-text-container apear'>
+        {invitation.params &&
+          <h1 id='hero-text-name' className='hero-text-name hero-text'>
+            {`Hola
+            ${invitation.name}`}
+          </h1>
+        }
+        <h1 id='hero-text-greet' className='hero-text-greet hero-text'>¡Nos casamos!</h1>
+      </div>
       <Photo1/>
     </div>
   )
+}
+
+const mapStateToProps = (state) => {
+  return{
+    isPersonalInvitation: state.isPersonalInvitation
+  }
 }
 
 const dispatchStateToProps = {
@@ -97,4 +113,4 @@ const dispatchStateToProps = {
   displayPhoto
 }
 
-export default connect(null, dispatchStateToProps)(Hero)
+export default connect(mapStateToProps, dispatchStateToProps)(Hero)

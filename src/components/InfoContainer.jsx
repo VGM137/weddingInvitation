@@ -114,6 +114,15 @@ const InfoContainer = (props) => {
         </div>
         <h1 id='main-text' className='main-text'>Ceremonia:</h1>
         <h2 id='secondary-text' className='secondary-text'>Jardín Flores</h2>
+        <iframe 
+          id='google-map'
+          className='google-map'
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.74140045541!2d-98.94735778509342!3d19.42357618688944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1e3eb15a1b587%3A0xb1b5773e11fb1d50!2sjardin%20flores!5e0!3m2!1ses!2smx!4v1634072932525!5m2!1ses!2smx" 
+          width="80%" 
+          height="auto" 
+          allowFullScreen="" 
+          loading="lazy" 
+          sandbox='allow-scripts allow-same-origin' />
         <h1 id='main-text' className='main-text'>Horario:</h1>
         <h2 id='secondary-text' className='secondary-text'>3:30pm</h2>
       </TextSection>

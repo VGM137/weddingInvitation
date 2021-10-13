@@ -140,59 +140,83 @@ const ScrollButton = ({specific}) => {
 
   return (
     <div id='buttons-container' className='buttons-container'>
-      {!isPersonalInvitation &&
+      {!isPersonalInvitation.params &&
         <>
           {isHero &&
             <button 
               id='button-scroll-forward' 
               className={`button button-scroll-forward ${specific}`} 
-              onClick={(e) => handleClick(e, 'forward')}></button>
+              onClick={(e) => handleClick(e, 'forward')}>
+                {'›'}
+                {/* <ArrowFor id='arrow' className='arrow' /> */}
+            </button>
           }
           {isTheMiddle &&
             <>
               <button 
                 id='button-scroll-forward' 
                 className={`button button-scroll-forward ${specific}`} 
-                onClick={(e) => handleClick(e, 'forward')}></button>
+                onClick={(e) => handleClick(e, 'forward')}>
+                  {'›'}
+                  {/* <ArrowFor id='arrow' className='arrow' /> */}
+              </button>
               <button 
                 id='button-scroll-backward' 
                 className={`button button-scroll-backward ${specific}`} 
-                onClick={(e) => handleClick(e, 'backward')}></button>
+                onClick={(e) => handleClick(e, 'backward')}>
+                  {'‹'}
+                  {/* <ArrowBack id='arrow' className='arrow' /> */}
+              </button>
             </>
           }
           {isEvent &&
             <button 
               id='button-scroll-backward' 
               className={`button button-scroll-backward ${specific}`} 
-              onClick={(e) => handleClick(e, 'backward')}></button>
+              onClick={(e) => handleClick(e, 'backward')}>
+                {'‹'}
+                {/* <ArrowBack id='arrow' className='arrow' /> */}
+            </button>
           }
         </>
       }
-      {isPersonalInvitation &&
+      {isPersonalInvitation.params &&
         <>
           {isHero &&
             <button 
               id='button-scroll-forward' 
               className={`button button-scroll-forward ${specific}`} 
-              onClick={(e) => handleClick(e, 'forward')}></button>
+              onClick={(e) => handleClick(e, 'forward')}>
+                {'›'}
+                {/* <ArrowFor id='arrow' className='arrow' /> */}
+            </button>
           }
           {isTheMiddleWithInvitation &&
             <>
               <button 
                 id='button-scroll-forward' 
                 className={`button button-scroll-forward ${specific}`} 
-                onClick={(e) => handleClick(e, 'forward')}></button>
+                onClick={(e) => handleClick(e, 'forward')}>
+                  {'›'}
+                  {/* <ArrowFor id='arrow' className='arrow' /> */}
+              </button>
               <button 
                 id='button-scroll-backward' 
                 className={`button button-scroll-backward ${specific}`} 
-                onClick={(e) => handleClick(e, 'backward')}></button>
+                onClick={(e) => handleClick(e, 'backward')}>
+                  {'‹'}
+                  {/* <ArrowBack id='arrow' className='arrow' /> */}
+              </button>
             </>
           }
           {isInvitation &&
             <button 
               id='button-scroll-backward' 
               className={`button button-scroll-backward ${specific}`} 
-              onClick={(e) => handleClick(e, 'backward')}></button>
+              onClick={(e) => handleClick(e, 'backward')}>
+                {'‹'}
+                {/* <ArrowBack id='arrow' className='arrow' /> */}
+            </button>
           }
         </>
       }

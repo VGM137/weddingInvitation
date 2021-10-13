@@ -133,6 +133,15 @@
  height: 90%;
  position: relative;
 }
+.event h1, .event h2 {
+  margin: 5px auto;
+}
+.google-map{
+  height: 20%;
+  margin: 5px auto;
+  border: 0;
+  border-radius: 10px;
+}
 .text-container-event{
   width: 100%;
 }
@@ -147,7 +156,7 @@
 }
 .deco-date-container{
   display: flex;
-  margin: 10px auto;
+  margin: 5px auto;
   width: 70%;
 }
 .deco-date-img{
@@ -191,7 +200,7 @@
   }
   .deco-date-container{
     display: flex;
-    margin: 10px auto;
+    margin: 5px auto;
     width: 55%;
   }
   .text-container-event h1{
@@ -210,6 +219,9 @@
     box-sizing: border-box;
     overflow: hidden;
   }
+  .google-map{
+    height: auto;
+  }
 }
 
 @media screen and (max-width: 426px){
@@ -227,6 +239,6 @@
 }
 @keyframes fadeDown {
   from {margin-bottom: 100px;}
-  to {margin-bottom: 10px;}
+  to {margin-bottom: 5px;}
 }
 

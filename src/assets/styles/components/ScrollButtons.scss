@@ -13,19 +13,32 @@
   height: 100vh;
   width: 40px;
   display: flex;
-  background-color: rgba(131, 131, 131, 0.5);
   border: none;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  font-size: 3em;
+  color: #c4c4c45e;  
 }
-
+.arrow{
+  align-self: center;
+  display: flex;
+  justify-self: center;
+  margin: auto;
+}
 .button-scroll-forward{
   grid-column: 4/4;
   grid-row: 1/2;
   margin: auto 0 auto auto;
+  background: rgba(0,0,0,0);
+  background: linear-gradient(to right,transparent 0%,transparent 25%,rgba(0,0,0,.10));
 }
 .button-scroll-backward{
   grid-column: 1/2;
   grid-row: 1/2;
   margin: auto auto auto 0;
+  background: rgba(0,0,0,0.33);
+  background: linear-gradient(to left,transparent 0%,transparent 25%,rgba(0,0,0,.10));
 }
 
 @media screen and (max-width: 769px){
@@ -33,11 +46,16 @@
     height: auto;
     bottom: 10px;
   }
-  .button{
+/*   .button{
     height: 40px;
     width: 40px;
     border-radius: 20px;
     margin: auto;
     display: flex;
-  }
+  } */
+/*   .button-scroll-backward, .button-scroll-forward{
+    background: rgba(0,0,0,.1);
+    background: linear-gradient(to right, rgba(0,0,0,0.1) 0%, rgba(0,0,0,.1) 10%, rgba(0,0,0,0.1) 10%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=1 );
+  } */
 }

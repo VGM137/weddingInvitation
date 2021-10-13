@@ -8,6 +8,9 @@ import Photo4 from "./Photo4";
 import Photo5 from "./Photo5";
 import Photo6 from "./Photo6";
 import Photo7 from "./Photo7";
+import Photo8 from "./Photo8";
+import Photo9 from "./Photo9";
+import Photo10 from "./Photo10";
 import PhotoFooter from "./PhotoFooter";
 import '../assets/styles/components/PhotosContainer.scss'
 
@@ -21,7 +24,7 @@ const PhotosContainer = (props) => {
   let isFourthPhoto = props.currentPhoto == 'ladies'
   let isFifthPhoto = props.currentPhoto == 'grooms'
   let isSixthPhoto = props.currentPhoto == 'event'
-  let isSeventhPhoto = props.currentPhoto == 'other'
+  let isSeventhPhoto = props.currentPhoto == 'personal-invitation'
 
   const handleLoad = (e) => {
       props.photoContainerSize(e.target.parentElement.parentElement.clientHeight)
@@ -32,22 +35,22 @@ const PhotosContainer = (props) => {
       <div id='portrait' className='portrait' onLoad={(e) => handleLoad(e)}>
         {isHero &&
           <>
-            <Photo7/>
+            <Photo4/>
           </>
         }
         {isFirstPhoto &&
           <>
-            <Photo2/>
+            <Photo8/>
           </>
         }
         {isSecondPhoto &&
           <>
-            <Photo3/>
+            <Photo10/>
           </>
         }
         {isThirdPhoto &&
           <>
-            <Photo4/>
+            <Photo3/>
           </>
         }
         {isFourthPhoto &&
@@ -67,7 +70,7 @@ const PhotosContainer = (props) => {
         }
         {isSeventhPhoto &&
           <>
-            <Photo7/>
+            <Photo2/>
           </>
         }
       </div>

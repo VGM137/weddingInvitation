@@ -16,7 +16,11 @@ const initialState = {
   home:'',
   photoContainer: '',
   currentPhoto: '',
-  isPersonalInvitation: false,
+  isPersonalInvitation: {
+    params: false,
+    name: '',
+    tickets: '',
+  },
 }
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()

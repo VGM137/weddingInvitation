@@ -8,10 +8,11 @@
   background: #002766;
   width: 100%;
   overflow: hidden;
+  white-space: pre-line;
 }
-.hero-text{
+.hero-text-container{
   font-family: Ephesis,cursive;
-  font-size: 5em;
+  font-size: 4em;
   height: 100%;
   position: absolute;
   width: 100%;
@@ -22,6 +23,11 @@
   flex-direction: column;
   color: #E6E6E6;
   z-index: 1;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.hero-text{
+  margin: 0 0 15px 0;
 }
 .apear{
   animation-name: apear;
@@ -36,8 +42,8 @@
   .hero{
     height: fit-content;
   }
-  .hero-text{
-    font-size: 3em;
+  .hero-text-container{
+    font-size: 2.5em;
   }
 }
 
