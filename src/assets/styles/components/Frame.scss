@@ -1,7 +1,7 @@
 .frame-container{
   width: 100vw;
   height: 100%;
-  display: grid;
+  display: none;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   position: absolute;
@@ -16,7 +16,6 @@
 .invitation-frame{
   height: 100%;
   width: 100%;
-  display: grid;
 }
 .frame-corner{
   width: auto;
@@ -74,5 +73,21 @@
   .frame-corner{
     width: 100%;
     height: auto;
+  }
+}
+
+.frameApear{
+  display: grid;
+  animation-name: frameApear;
+  animation-duration: 2s;
+}
+@keyframes frameApear {
+  from {
+    transform: scale(0.9);
+    opacity: 0
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
   }
 }

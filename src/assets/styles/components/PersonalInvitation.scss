@@ -13,7 +13,7 @@
   font-size: 2.5em;
   margin: 10px auto;
   font-family: 'Ephesis', cursive;
-  display: inline-block;
+  display: none;
   vertical-align: middle;
   width: 100%;
   text-align: center;
@@ -23,7 +23,7 @@
   margin: 10px auto;
   font-family: 'Montserrat', sans-serif;
   font-weight: 200;
-  display: inline-block;
+  display: none;
   vertical-align: middle;
   width: 100%;
   padding: 0 150px 0 250px;
@@ -41,7 +41,38 @@
   box-sizing: border-box;
   overflow: hidden;
 }
-
+.ticket-deco{
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  position: absolute;
+  margin: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+}
+.ticket-left-cover{
+  width: 100%;
+  height: 100%;
+  background: #002d75;
+  display: none;
+}
+.ticket-right-cover{
+  width: 100%;
+  height: 100%;
+  background: #002d75;
+  display: none;
+}
+.ticket-stamp{
+  position: absolute;
+  text-align: center;
+  margin: auto;
+  justify-content: center;
+  display: flex;
+  width: 50%;
+  opacity: 0;
+}
 @media screen and (max-width: 769px){
   .ticket-main-text{
     font-size: 2.2em;
@@ -60,5 +91,51 @@
 @media screen and (max-width: 321px){
   .ticket-secondary-text{
     padding: 0 20px 0 50px;
+  }
+}
+
+
+.desapear{
+  animation-name: desapear;
+  animation-duration: 2s;
+}
+@keyframes desapear {
+  from {opacity: 1  }
+  to {opacity: 0;  }
+}
+
+.resize-left{
+  width: 0;
+  animation-name: resizeLeftCover;
+  animation-duration: 2s;
+}
+@keyframes resizeLeftCover {
+  from {width: 100%;}
+  to {width: 0px;}
+}
+
+.resize-right{
+  margin-left: 100%;
+  animation-name: resizeRightCover;
+  animation-duration: 2s;
+}
+@keyframes resizeRightCover {
+  from {margin-left: 0;}
+  to {margin-left: 100%;}
+}
+
+.invitationFadeUp{
+  animation-name: invitationFadeUp;
+  animation-duration: 2s;
+}
+@keyframes invitationFadeUp {
+  from {
+    display: none;
+    opacity: 0;
+    margin-top: 100px;
+  }
+  to {
+    opacity: 1;
+    margin-top: 10px;
   }
 }

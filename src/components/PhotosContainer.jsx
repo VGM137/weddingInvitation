@@ -11,7 +11,8 @@ import Photo7 from "./Photo7";
 import Photo8 from "./Photo8";
 import Photo9 from "./Photo9";
 import Photo10 from "./Photo10";
-import PhotoFooter from "./PhotoFooter";
+import PhotoFooter  from './PhotoFooter.jsx'
+import Names from '../assets/static/names.svg'
 import '../assets/styles/components/PhotosContainer.scss'
 
 const PhotosContainer = (props) => {
@@ -31,52 +32,87 @@ const PhotosContainer = (props) => {
   }
 
   return(
-    <div id='photos-container' className='photos-container' >
-      <div id='portrait' className='portrait' onLoad={(e) => handleLoad(e)}>
+    <div id='photos-container' className='photos-container' onLoad={(e) => handleLoad(e)}>
         {isHero &&
           <>
-            <Photo4/>
+            <div id='portrait' className='portrait'>
+              <Photo4/>
+            </div>
+            <PhotoFooter>
+              <Names />
+            </PhotoFooter>
           </>
         }
         {isFirstPhoto &&
           <>
-            <Photo8/>
+            <div id='portrait' className='portrait'>
+              <Photo8/>
+            </div>
+            <PhotoFooter>
+              <Names />
+            </PhotoFooter>
           </>
         }
         {isSecondPhoto &&
           <>
-            <Photo10/>
+            <div id='portrait' className='portrait'>
+              <Photo10/>
+            </div>
+            <PhotoFooter>
+              <Names />
+            </PhotoFooter>
           </>
         }
         {isThirdPhoto &&
           <>
-            <Photo3/>
+            <div id='portrait' className='portrait'>
+              <Photo3/>
+            </div>
+            <PhotoFooter>
+              <Names />
+            </PhotoFooter>
           </>
         }
         {isFourthPhoto &&
           <>
-            <Photo5/>
+            <div id='portrait' className='portrait'>
+              <Photo5/>
+            </div>
+            <PhotoFooter>
+              <Names />
+            </PhotoFooter>
           </>
         }
         {isFifthPhoto &&
           <>
-            <Photo6/>
+            <div id='portrait' className='portrait'>
+              <Photo6/>
+            </div>
+            <PhotoFooter>
+              <Names />
+            </PhotoFooter>
           </>
         }
         {isSixthPhoto &&
           <>
-            <Photo7/>
+            <div id='portrait' className='portrait'>
+              <Photo7/>
+            </div>
+            <PhotoFooter>
+              <Names />
+            </PhotoFooter>
           </>
         }
         {isSeventhPhoto &&
           <>
-            <Photo2/>
+            <div id='portrait' className='portrait'>
+              <Photo2/>
+            </div>
+            <PhotoFooter>
+              <Names />
+            </PhotoFooter>
           </>
         }
-      </div>
-      <div id='photo-footer-container' className='photo-footer-container'>
-
-      </div>
     </div>
   )
 }

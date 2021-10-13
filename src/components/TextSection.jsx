@@ -38,7 +38,7 @@ const TextSection = ({specific, childrenSpecific, children}) => {
           entry.target.childNodes[0].style.display = 'block'
           children.forEach(child => {
             if(child.classList[0] == 'frame-container'){
-              child.classList.add('apear')
+              child.classList.add('frameApear')
             }else{
               child.classList.add('fadeUp')}
             })
@@ -52,7 +52,7 @@ const TextSection = ({specific, childrenSpecific, children}) => {
           entry.target.childNodes[0].style.display = 'block'
           children.forEach(child => {
             if(child.classList[0] == 'frame-container'){
-              child.classList.add('apear')
+              child.classList.add('frameApear')
             }else{
               child.classList.add('fadeDown')}
             })

@@ -29,10 +29,6 @@
 .hero-text{
   margin: 0 0 15px 0;
 }
-.apear{
-  animation-name: apear;
-  animation-duration: 2s;
-}
 .hero-img{
   width: auto;
   height: 100%;
@@ -47,6 +43,10 @@
   }
 }
 
+.apear{
+  animation-name: apear;
+  animation-duration: 2s;
+}
 @keyframes apear {
   from {
     transform: scale(0.9);

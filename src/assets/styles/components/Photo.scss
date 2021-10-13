@@ -35,13 +35,28 @@
   height: auto;
   width: 100%;
 }
-.photoTwo-container, .photoSix-container{
+.photoTwo-container {
   width: auto;
   height: 100%;
 }
-.photoTwo, .photoSix{
+.photoSix-container{
+  width: 70%;
+}
+.photoTen-container{
+  width: auto;
+  height: 100%;
+  display: flex;
+}
+.photoTwo, .photoEight{
   width: auto;
 }
+.photoEight-container{
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
 @media screen and (max-width: 769px){
   .photoOne-container, .photoSeven-container{
@@ -67,6 +82,16 @@
     width: 100%;
     height: auto;
     margin: auto;
+  }
+  .photoTwo-container, .photoSix-container, .photoSeven-container, .photoEight-container{
+    height: 100%;
+  }
+  .photoTwo, .photoSix, .photoSeven, .photoEight{
+    height: 100%;
+    width: auto;
+  }
+  .photoTen{
+    margin: 0
   }
 }
 

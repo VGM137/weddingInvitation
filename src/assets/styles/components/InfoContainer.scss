@@ -136,11 +136,35 @@
 .event h1, .event h2 {
   margin: 5px auto;
 }
+.event-info{
+  display: flex;
+  margin: 5px auto;
+  width: 80%;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.event-location-container{
+  height: 200px;
+  width: 200px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+.map-deco{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
 .google-map{
-  height: 20%;
+  height: 200px;
+  width: 200px;
   margin: 5px auto;
   border: 0;
-  border-radius: 10px;
+  border-radius: 100px;
+  position: relative;
+  z-index: 1;
 }
 .text-container-event{
   width: 100%;
@@ -157,23 +181,12 @@
 .deco-date-container{
   display: flex;
   margin: 5px auto;
-  width: 70%;
+  width: 60%;
 }
 .deco-date-img{
   width: 100%;
   margin: auto;
 }
-
-
-.fadeUp{
-  animation-name: fadeUp;
-  animation-duration: 2s;
-}
-.fadeDown{
-  animation-name: fadeDown;
-  animation-duration: 2s;
-}
-
 
 @media screen and (max-width: 769px){
 
@@ -219,23 +232,39 @@
     box-sizing: border-box;
     overflow: hidden;
   }
-  .google-map{
-    height: auto;
-  }
 }
 
 @media screen and (max-width: 426px){
+  .event-info{
+    display: block;
+    margin: 5px auto;
+    width: 80%;
+    align-items: center;
+  }
   .deco-element-container{
     width: 70%;
   }
   .deco-date-container{
     width: 80%;
   }
+  .google-map{
+    width: 150px;
+    height: 150px;    
+  }
 }
 
+.fadeUp{
+  animation-name: fadeUp;
+  animation-duration: 2s;
+}
 @keyframes fadeUp {
   from {margin-top: 100px;}
   to {margin-top: 10px;}
+}
+
+.fadeDown{
+  animation-name: fadeDown;
+  animation-duration: 2s;
 }
 @keyframes fadeDown {
   from {margin-bottom: 100px;}

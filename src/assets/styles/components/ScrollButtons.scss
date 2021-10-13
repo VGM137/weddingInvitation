@@ -1,16 +1,18 @@
 .buttons-container{
-  height: 100vh;
+  height: 5vh;
   width: 100vw;
   position: fixed;
-  display: grid;
+  display: flex;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 100%;
   z-index: 2;
   bottom: 12px;
+  justify-content: space-between;
+  margin-bottom: 10px;
 }
 
 .button{
-  height: 100vh;
+  height: 5vh;
   width: 40px;
   display: flex;
   border: none;
@@ -18,27 +20,27 @@
   justify-content: center;
   align-items: center;
   font-size: 3em;
-  color: #c4c4c45e;  
+  color: rgba(220, 156, 46, .5);  
 }
-.arrow{
+/* .arrow{
   align-self: center;
   display: flex;
   justify-self: center;
   margin: auto;
-}
+} */
 .button-scroll-forward{
   grid-column: 4/4;
   grid-row: 1/2;
-  margin: auto 0 auto auto;
-  background: rgba(0,0,0,0);
-  background: linear-gradient(to right,transparent 0%,transparent 25%,rgba(0,0,0,.10));
+  margin: 0 0 0 auto;
+/*   background: rgba(0,0,0,0);
+  background: linear-gradient(to right,transparent 0%,transparent 25%,rgba(0,0,0,.10)); */
 }
 .button-scroll-backward{
   grid-column: 1/2;
   grid-row: 1/2;
-  margin: auto auto auto 0;
-  background: rgba(0,0,0,0.33);
-  background: linear-gradient(to left,transparent 0%,transparent 25%,rgba(0,0,0,.10));
+  margin: 0;
+/*   background: rgba(0,0,0,0.33);
+  background: linear-gradient(to left,transparent 0%,transparent 25%,rgba(0,0,0,.10)); */
 }
 
 @media screen and (max-width: 769px){

@@ -2,6 +2,7 @@ import React, {useRef, useState, useMemo, useEffect} from "react";
 import { connect } from "react-redux";
 import { displayPhoto } from "../actions";
 import Frame from "./Frame";
+import Stamp from '../assets/static/stamp.svg'
 import '../assets/styles/components/PersonalInvitation.scss'
 
 const PersonalInvitation = (props) => {
@@ -22,29 +23,92 @@ const PersonalInvitation = (props) => {
       doAnimate = false
     }
 
+    let children = entry.target.childNodes[0].childNodes
     if(doAnimate == true){
       if(intersectionRatio == 0.2){
         console.log(entry.target.classList[1])
         props.displayPhoto(entry.target.classList[0])
-        let children = entry.target.childNodes[0].childNodes
           entry.target.childNodes[0].style.display = 'block'
+          console.log(entry.target.childNodes)
+
           children.forEach(child => {
-            if(child.classList[0] == 'frame-container'){
-              child.classList.add('apear')
-            }else{
-              child.classList.add('fadeUp')}
-            })
+            if(child.classList == 'ticket-deco'){
+              child.childNodes.forEach(children => {
+                if(children.classList[0] !== 'ticket-stamp'){
+                  children.style.display = 'flex'
+                }
+                if(children.classList[0] == 'ticket-stamp'){
+                  children.classList.add('desapear')
+                }
+              })
+            }
+          })
           setTimeout(() => {
             children.forEach(child => {
-              child.classList.remove('fadeUp')
-              child.classList.remove('apear')
+              if(child.classList == 'ticket-deco'){
+                child.childNodes.forEach(children => {
+                  if(children.classList[0] == 'ticket-left-cover'){
+                    
+                    children.classList.add('resize-left')
+                  }
+                })
+              }
             })
-          }, 2200);
-      }
+          }, 1500)
+          setTimeout(() => {
+            children.forEach(child => {
+              if(child.classList == 'ticket-deco'){
+                child.childNodes.forEach(children => {
+                  if(children.classList[0] == 'ticket-right-cover'){
+                    
+                    children.classList.add('resize-right')
+                  }
+                })
+              }
+            })
+          }, 1500)
+/*           setTimeout(() => {
+            children.forEach(child => {
+              if(child.classList == 'ticket-deco'){
+                child.childNodes.forEach(children => {
+                  if(children.classList[0] !== 'ticket-stamp'){
+                    children.style.display = 'none'
+                  }
+                })
+              }
+            })
+          }, 2000) */
+
+          setTimeout(() => {
+            children.forEach(child => {
+              if(child.classList[0] == 'frame-container'){
+                child.classList.add('frameApear')
+               }
+            })
+          }, 1800);
+
+          setTimeout(() => {
+            children.forEach(child => {
+              console.log(child)
+              if(child.classList[0] !== 'ticket-deco' && child.classList[0] !== 'frame-container'){
+                child.style.display = 'inline-block'
+                child.classList.add('invitationFadeUp')
+              }
+            })
+          }, 1500);
+
+          setTimeout(() => {
+            children.forEach(child => {
+              child.classList.remove('desapear')
+              child.classList.remove('invitaitonFadeUp')
+            })
+          }, 4200);
+        }
     }
 
     if(intersectionRatio <= 0.1){
       doAnimate = true
+      
       entry.target.childNodes[0].style.display = 'none'
     }
 
@@ -90,6 +154,11 @@ const PersonalInvitation = (props) => {
       ?
         <div id='personal-invitation' className='personal-invitation' ref={targetRef}>
           <div id='ticket' className='ticket'>
+            <div className='ticket-deco'>
+              <div className='ticket-left-cover'></div>
+              <div className='ticket-right-cover'></div>
+              <Stamp className='ticket-stamp'/>
+            </div>
             <Frame specific={'invitation-frame'} />
             <h1 id='ticket-main-text' className='ticket-main-text'>{`Hola ${invitation.name}`}</h1>
             <h2 id='ticket-secondary-text' className='ticket-secondary-text'>Estamos muy felices por la celebración de nuestra unión y nos encantaría que nos acompañes.</h2>
@@ -97,7 +166,7 @@ const PersonalInvitation = (props) => {
             {invitation.tickets > 1
               ?
                 <>
-                  <h2 id='ticket-secondary-text' className='ticket-secondary-text'>Esta invitatción es para ti y {invitation.tickets == 2 ? 'una persona más.' : `${invitation.tickets} personas más.`}</h2>
+                  <h2 id='ticket-secondary-text' className='ticket-secondary-text'>Esta invitación es para ti y {invitation.tickets == 2 ? 'una persona más.' : `${invitation.tickets} personas más.`}</h2>
                   <h2 id='ticket-secondary-text' className='ticket-secondary-text'>Te esperamos con mucho gusto para compartir este día tan especial contigo y tus invitados.</h2>
                 </>
               :
