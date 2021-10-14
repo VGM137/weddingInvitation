@@ -10,7 +10,8 @@
   bottom: 12px;
 }
 .event-frame{
-  width: auto;
+  width: 100vw;
+  height: 100%;
   bottom: auto;
 }
 .invitation-frame{
@@ -24,8 +25,8 @@
   box-sizing: border-box;
 }
 .corner-event-frame{
-  width: 100%;
-  height: auto;
+  width: auto;
+  height: 100%;
   margin: 0;
   padding: 10px;
 }
