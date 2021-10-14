@@ -96,6 +96,7 @@ const Hero = (props) => {
           </h1>
         }
         <h1 id='hero-text-greet' className='hero-text-greet hero-text'>¡Nos casamos!</h1>
+        
       </div>
       <Photo1/>
     </div>

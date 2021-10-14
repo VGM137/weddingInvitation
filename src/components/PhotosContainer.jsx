@@ -39,7 +39,12 @@ const PhotosContainer = (props) => {
               <Photo4/>
             </div>
             <PhotoFooter>
-              <Names />
+              <Names className='names'/>
+              <div className='photos-secondary-text'>
+                <h2>
+                  {`Porque la vida se torno de colores cuando entraste en mi vida.`}
+                </h2>
+              </div>  
             </PhotoFooter>
           </>
         }
@@ -49,7 +54,13 @@ const PhotosContainer = (props) => {
               <Photo8/>
             </div>
             <PhotoFooter>
-              <Names />
+              <div className='photos-secondary-text'>
+                <h2>
+                {`MOTIVADOS POR EL AMOR QUE NOS TENEMOS, CON ALEGRIA,
+                
+                  LA BENDICION DE DIOS Y NUESTROS PADRES.`}
+                </h2>
+              </div> 
             </PhotoFooter>
           </>
         }
@@ -59,7 +70,13 @@ const PhotosContainer = (props) => {
               <Photo10/>
             </div>
             <PhotoFooter>
-              <Names />
+              <div className='photos-secondary-text'>
+                <h2>
+                {`UNO SOLO PUEDE SER VENCIDO, PERO DOS PUEDEN RESISTIR;
+                
+                  CORDÓN DE TRES DOBLECES NO SE ROMPE FACILMENTE`}
+                </h2>
+              </div> 
             </PhotoFooter>
           </>
         }
@@ -69,7 +86,15 @@ const PhotosContainer = (props) => {
               <Photo3/>
             </div>
             <PhotoFooter>
-              <Names />
+              <div className='photos-secondary-text'>
+                <h2>
+                  {`Cuando te das cuenta que deseas pasar el resto de tu vida con alguien,
+                  `}
+                  <b>{`
+                  QUIERES QUE EL RESTO DE TU VIDA COMIENCE LO ANTES POSIBLE.`}
+                  </b>
+                </h2>
+              </div>  
             </PhotoFooter>
           </>
         }
@@ -79,7 +104,7 @@ const PhotosContainer = (props) => {
               <Photo5/>
             </div>
             <PhotoFooter>
-              <Names />
+              <Names className='previous'/>
             </PhotoFooter>
           </>
         }
@@ -89,7 +114,7 @@ const PhotosContainer = (props) => {
               <Photo6/>
             </div>
             <PhotoFooter>
-              <Names />
+              <Names className='previous'/>
             </PhotoFooter>
           </>
         }
@@ -99,7 +124,15 @@ const PhotosContainer = (props) => {
               <Photo7/>
             </div>
             <PhotoFooter>
-              <Names />
+              <div className='photos-secondary-text'>
+                <h2>
+                {`EL LUGAR DONDE INICIA 
+                  EL TAN ANHELADO MOMENTO,
+
+                  CUANDO EL PRINCIPE 
+                  RESCATA A SU PRINCESA`}
+                </h2>
+              </div> 
             </PhotoFooter>
           </>
         }
@@ -109,7 +142,7 @@ const PhotosContainer = (props) => {
               <Photo2/>
             </div>
             <PhotoFooter>
-              <Names />
+              <Names className='previous'/>
             </PhotoFooter>
           </>
         }

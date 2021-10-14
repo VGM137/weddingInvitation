@@ -1,7 +1,7 @@
 .photos-container{
   width: 100%;
   height: 100vh;
-  display: block;
+  display: flex;
   position: sticky;
   top: 0;
 }
@@ -15,9 +15,29 @@
   overflow: hidden;
   justify-content: center;
 }
+.photos-secondary-text{
+  font-family: 'Montserrat', sans-serif;
+  font-size: .7em;
+  font-weight: 100;
+  bottom: 0;
+  width: 90%;
+  box-sizing: border-box;
+  text-align: left;
+  line-height: 1.7em;
+  white-space: pre-line
+}
+.names{
+  display: none;
+}
+.previous{
+  filter: invert(1)
+}
 
 
 @media screen and (max-width: 767px){
+  .names{
+    display: flex;
+  }
   .photos-container{
     height: 100vh;
     display: grid;
@@ -25,9 +45,23 @@
     grid-template-columns: 100%;
     flex-direction: column;
   }
+  .photos-secondary-text{
+    font-family: 'Montserrat', sans-serif;
+    font-size: .7em;
+    font-weight: 100;
+    bottom: 0;
+    width: 90%;
+    box-sizing: border-box;
+    text-align: left;
+    line-height: 1.7em;
+    white-space: pre-line
+  }
   .portrait{
     width: 100%;
     height: 100%;
     box-sizing: border-box;
+  }
+  .previous{
+    filter: invert(0)
   }
 }

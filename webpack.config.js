@@ -14,12 +14,12 @@ module.exports= {
     publicPath: '/'
   },
   resolve:{
-    extensions: ['.js', '.jsx']
+    extensions: ['.js', '.ts', '.jsx']
   },
   module: {
     rules:[
       {
-        test: /\.(js|jsx)$/,
+        test: /\.(js|ts|jsx)$/,
         exclude: /node_modules/,
         use:{
           loader: 'babel-loader'

@@ -26,83 +26,73 @@ const PersonalInvitation = (props) => {
     let children = entry.target.childNodes[0].childNodes
     if(doAnimate == true){
       if(intersectionRatio == 0.2){
-        console.log(entry.target.classList[1])
+        
         props.displayPhoto(entry.target.classList[0])
-          entry.target.childNodes[0].style.display = 'block'
-          console.log(entry.target.childNodes)
 
-          children.forEach(child => {
-            if(child.classList == 'ticket-deco'){
-              child.childNodes.forEach(children => {
-                if(children.classList[0] !== 'ticket-stamp'){
-                  children.style.display = 'flex'
-                }
-                if(children.classList[0] == 'ticket-stamp'){
+        entry.target.childNodes[0].style.display = 'block'
+
+        children.forEach(child => {
+          if(child.classList == 'ticket-deco'){
+            child.childNodes.forEach(children => {
+              if(children.classList[0] !== 'ticket-stamp'){
+                children.style.display = 'flex'
+              }
+              if(children.classList[0] == 'ticket-stamp'){
                   children.classList.add('desapear')
                 }
               })
             }
           })
-          setTimeout(() => {
-            children.forEach(child => {
-              if(child.classList == 'ticket-deco'){
-                child.childNodes.forEach(children => {
-                  if(children.classList[0] == 'ticket-left-cover'){
-                    
-                    children.classList.add('resize-left')
-                  }
-                })
-              }
-            })
-          }, 1500)
-          setTimeout(() => {
-            children.forEach(child => {
-              if(child.classList == 'ticket-deco'){
-                child.childNodes.forEach(children => {
-                  if(children.classList[0] == 'ticket-right-cover'){
-                    
-                    children.classList.add('resize-right')
-                  }
-                })
-              }
-            })
-          }, 1500)
-/*           setTimeout(() => {
-            children.forEach(child => {
-              if(child.classList == 'ticket-deco'){
-                child.childNodes.forEach(children => {
-                  if(children.classList[0] !== 'ticket-stamp'){
-                    children.style.display = 'none'
-                  }
-                })
-              }
-            })
-          }, 2000) */
 
-          setTimeout(() => {
-            children.forEach(child => {
-              if(child.classList[0] == 'frame-container'){
-                child.classList.add('frameApear')
-               }
-            })
-          }, 1800);
+        setTimeout(() => {
+          children.forEach(child => {
+            if(child.classList == 'ticket-deco'){
+              child.childNodes.forEach(children => {
+                if(children.classList[0] == 'ticket-left-cover'){
+                  
+                  children.classList.add('resize-left')
+                }
+              })
+            }
+          })
+        }, 2500)
 
-          setTimeout(() => {
-            children.forEach(child => {
-              console.log(child)
-              if(child.classList[0] !== 'ticket-deco' && child.classList[0] !== 'frame-container'){
-                child.style.display = 'inline-block'
-                child.classList.add('invitationFadeUp')
-              }
-            })
-          }, 1500);
+        setTimeout(() => {
+          children.forEach(child => {
+            if(child.classList == 'ticket-deco'){
+              child.childNodes.forEach(children => {
+                if(children.classList[0] == 'ticket-right-cover'){
+                  
+                  children.classList.add('resize-right')
+                }
+              })
+            }
+          })
+        }, 2500)
+        setTimeout(() => {
+          children.forEach(child => {
+            if(child.classList[0] == 'frame-container'){
+              child.classList.add('frameApear')
+             }
+          })
+        }, 2800);
 
-          setTimeout(() => {
-            children.forEach(child => {
-              child.classList.remove('desapear')
-              child.classList.remove('invitaitonFadeUp')
-            })
-          }, 4200);
+        setTimeout(() => {
+          children.forEach(child => {
+            console.log(child)
+            if(child.classList[0] !== 'ticket-deco' && child.classList[0] !== 'frame-container'){
+              child.style.display = 'inline-block'
+              child.classList.add('invitationFadeUp')
+            }
+          })
+        }, 2500);
+
+        setTimeout(() => {
+          children.forEach(child => {
+            child.classList.remove('desapear')
+            child.classList.remove('invitaitonFadeUp')
+          })
+        }, 5200);
         }
     }
 

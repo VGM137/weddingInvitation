@@ -30,110 +30,135 @@ const InfoContainer = (props) => {
       
       <TextSection specific='engaged-couple'>
         <Frame />
-        <div id='info-engaged-img-container' 
-          className='info-engaged-img-container'>
-          <EngagedPhoto id='info-engaged-img' className='info-engaged-img' />
+        <div className='info-cover' id='info-cover'></div>
+        <div id='info-content' className='info-content'>
+          <div id='info-engaged-img-container' 
+            className='info-engaged-img-container'>
+            <EngagedPhoto id='info-engaged-img' className='info-engaged-img' />
+          </div>
+          <h1 id='main-text' className='main-text'>Novios:</h1>
+          <h2 id='secondary-text' className='secondary-text'>
+            {`Jazmín Adriana 
+              Flores Santana`}</h2>
+          <div id='engaged-rings-container' className='engaged-rings-container'>
+            <Rings id='engaged-rings' className='engaged-rings' />
+          </div>
+          <h2 id='secondary-text' className='secondary-text'>
+            {`José Rodrigo 
+              Vallejo Hernández`}</h2>
         </div>
-        <h1 id='main-text' className='main-text'>Novios:</h1>
-        <h2 id='secondary-text' className='secondary-text'>
-          {`Jazmín Adriana 
-            Flores Santana`}</h2>
-        <div id='engaged-rings-container' className='engaged-rings-container'>
-          <Rings id='engaged-rings' className='engaged-rings' />
-        </div>
-        <h2 id='secondary-text' className='secondary-text'>
-          {`José Rodrigo 
-            Vallejo Hernández`}</h2>
       </TextSection>
 
       <TextSection specific='parents'>
         <Frame />
-        <h1 id='main-text' className='main-text'>Nuestros padres:</h1>
-        <h2 id='secondary-text' className='secondary-text'>
-          {`Graciela 
-            Santana Rivera
-         
-            &
+        <div className='info-cover' id='info-cover'></div>
+        <div id='info-content' className='info-content'>
+          <h1 id='main-text' className='main-text'>Nuestros padres:</h1>
+          <h2 id='secondary-text' className='secondary-text'>
+            {`Graciela 
+              Santana Rivera
 
-            Adrián 
-            Flores Rodriguez`}</h2>
-        <div id='deco-element-container' className='deco-element-container'>
-          <Theme1 id='deco-element-img' className='deco-element-img' />
+              &
+
+              Adrián 
+              Flores Rodriguez`}</h2>
+          <div id='deco-element-container' className='deco-element-container'>
+            <Theme1 id='deco-element-img' className='deco-element-img' />
+          </div>
+          <h2 id='secondary-text' className='secondary-text'>
+            {`María de los Ángeles 
+              Hernández Ayala
+
+              &
+
+              José Rodrigo 
+              Vallejo Calderon`}</h2>
         </div>
-        <h2 id='secondary-text' className='secondary-text'>
-          {`María de los Ángeles 
-            Hernández Ayala
-        
-            &
-
-            José Rodrigo 
-            Vallejo Calderon`}</h2>
       </TextSection>
 
       <TextSection specific='good-parents'>
         <Frame />
-        <h1 id='main-text' className='main-text'>Nuestros Padrinos:</h1>
-        <h2 id='secondary-text' className='secondary-text'>Francisco Javier Escobar y Karina Martínez  </h2>
-        <h2 id='secondary-text' className='secondary-text'>Laura Haydee Vallejo Hernández </h2>
-        <h2 id='secondary-text' className='secondary-text'>Jessica Flores          </h2>
-        <h2 id='secondary-text' className='secondary-text'>Eduardo Hernández</h2>
-        <h2 id='secondary-text' className='secondary-text'>Bibiana Álvarez</h2>
-        <h2 id='secondary-text' className='secondary-text'>Luis y Lidia Monsalvo</h2>
-        <div id='deco-element-container' className='deco-element-container'>
-          <Theme2 id='deco-element-img' className='deco-element-img' />
+        <div className='info-cover' id='info-cover'></div>
+        <div id='info-content' className='info-content'>
+          <h1 id='main-text' className='main-text'>Nuestros Padrinos:</h1>
+          <h2 id='secondary-text' className='secondary-text'>{
+          `Francisco Javier Escobar 
+          y Karina Martínez`}  </h2>
+          <h2 id='secondary-text' className='secondary-text'>{
+          `Laura Haydee 
+          Vallejo Hernández`}</h2>
+          <h2 id='secondary-text' className='secondary-text'>Jessica Flores          </h2>
+          <h2 id='secondary-text' className='secondary-text'>Eduardo Hernández</h2>
+          <h2 id='secondary-text' className='secondary-text'>Bibiana Álvarez</h2>
+          <h2 id='secondary-text' className='secondary-text'>Luis y Lidia Monsalvo</h2>
+          <div id='deco-element-container' className='deco-element-container'>
+            <Theme2 id='deco-element-img' className='deco-element-img' />
+          </div>
         </div>
       </TextSection>
 
       <TextSection specific='ladies'>
         <Frame />
-        <h1 id='main-text' className='main-text'>Damas de Honor</h1>
-        <h2 id='secondary-text' className='secondary-text'>Diana Flores</h2>
-        <h2 id='secondary-text' className='secondary-text'>Jessica Flores</h2>
-        <h2 id='secondary-text' className='secondary-text'>Valeria Hernández </h2>
-        <h2 id='secondary-text' className='secondary-text'>Norma Laguna</h2>
-        <div id='deco-element-container' className='deco-element-container'>
-          <Theme4 id='deco-element-img' className='deco-element-img' />
+        <div className='info-cover' id='info-cover'></div>
+        <div id='info-content' className='info-content'>
+          <h1 id='main-text' className='main-text'>Damas de Honor</h1>
+          <h2 id='secondary-text' className='secondary-text'>Diana Flores</h2>
+          <h2 id='secondary-text' className='secondary-text'>Jessica Flores</h2>
+          <h2 id='secondary-text' className='secondary-text'>Valeria Hernández </h2>
+          <h2 id='secondary-text' className='secondary-text'>Norma Laguna</h2>
+          <div id='deco-element-container' className='deco-element-container'>
+            <Theme4 id='deco-element-img' className='deco-element-img' />
+          </div>
         </div>
       </TextSection>
 
       <TextSection specific='grooms'>
         <Frame />
-        <h1 id='main-text' className='main-text'>Caballeros de Honor</h1>
-        <h2 id='secondary-text' className='secondary-text'>Rafael Avendaño</h2>
-        <h2 id='secondary-text' className='secondary-text'>Francisco Escobar</h2>
-        <h2 id='secondary-text' className='secondary-text'>Eduardo Hernández</h2>
-        <h2 id='secondary-text' className='secondary-text'>Esteban Valverde</h2>
-        <div id='deco-element-container' className='deco-element-container'>
-          <Theme3 id='deco-element-img' className='deco-element-img' />
+        <div className='info-cover' id='info-cover'></div>
+        <div id='info-content' className='info-content'>
+          <h1 id='main-text' className='main-text'>Caballeros de Honor</h1>
+          <h2 id='secondary-text' className='secondary-text'>Rafael Avendaño</h2>
+          <h2 id='secondary-text' className='secondary-text'>Francisco Escobar</h2>
+          <h2 id='secondary-text' className='secondary-text'>Eduardo Hernández</h2>
+          <h2 id='secondary-text' className='secondary-text'>Esteban Valverde</h2>
+          <div id='deco-element-container' className='deco-element-container'>
+            <Theme3 id='deco-element-img' className='deco-element-img' />
+          </div>
         </div>
       </TextSection>
 
       <TextSection specific='event' childrenSpecific='text-container-event'>
         <Frame specific='event-frame'/>
-        <div id='deco-date-container' className='deco-date-container'>
-          <Date id='deco-date-img' className='deco-date-img' />
-        </div>
-        {/* <h2 id='secondary-text' className='secondary-text'>Jardín Flores</h2> */}
-        
-        <div className='event-info'>
-          <div className='event-location'>
-            <h1 id='main-text' className='main-text'>Ceremonia:</h1>
-            <div className='event-location-container'>
-              {/* <MapDeco className='map-deco' /> */}
-              <iframe 
-                id='google-map'
-                className='google-map'
-                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDTjYvsjcBXvX8draj42iSB8iPA7cWlJGQ&q=place_id:ChIJEw77P-vj0YURV9IkkiJ_DYY" 
-                width="200px" 
-                height="200px" 
-                allowFullScreen="" 
-                loading="lazy" 
-                allowpopups='true' />
+        <div className='info-cover' id='info-cover'></div>
+        <div id='info-content' className='info-content'>
+          <div id='deco-date-container' className='deco-date-container'>
+            <Date id='deco-date-img' className='deco-date-img' />
+          </div>        
+          <div className='event-info'>
+            <div className='event-location'>
+              <h1 id='main-text' className='main-text'>Mapa:</h1>
+              <div className='event-location-container'>
+                {/* <MapDeco className='map-deco' /> */}
+                <iframe 
+                  id='google-map'
+                  className='google-map'
+                  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDTjYvsjcBXvX8draj42iSB8iPA7cWlJGQ&q=place_id:ChIJEw77P-vj0YURV9IkkiJ_DYY" 
+                  width="200px" 
+                  height="200px" 
+                  allowFullScreen="" 
+                  loading="lazy" 
+                  allowpopups='true' />
+              </div>
             </div>
-          </div>
-          <div className='event-hour'>
-            <h1 id='main-text' className='main-text'>Horario:</h1>
-            <h2 id='secondary-text' className='secondary-text'>15:30 hrs.</h2>
+            <div className='event-hour'>
+              <h1 id='main-text' className='main-text'>Ceremonia:</h1>
+              <h2 id='event-secondary-text' className='event-secondary-text'>{
+                `Te esperamos en 
+                El Jardín de las flores`}</h2>
+              <h2 id='event-secondary-text' className='event-secondary-text'>Calle Compuerta 5, El Molino, 56334 Chimalhuacán, Méx.</h2>
+              <h1 id='main-text' className='main-text'>Horario:</h1>
+              <h2 id='secondary-text' className='secondary-text'>15:30 hrs.</h2>
+            </div>
           </div>
         </div>
       </TextSection>

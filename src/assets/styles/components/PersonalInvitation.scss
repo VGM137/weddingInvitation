@@ -70,7 +70,7 @@
   margin: auto;
   justify-content: center;
   display: flex;
-  width: 50%;
+  height: 50%;
   opacity: 0;
 }
 @media screen and (max-width: 769px){
@@ -80,6 +80,15 @@
   .ticket-secondary-text{
     font-size: 1.2em;
     padding: 0 140px 0 200px;
+  }
+  .ticket-stamp{
+    position: absolute;
+    text-align: center;
+    margin: auto;
+    justify-content: center;
+    display: flex;
+    width: 50%;
+    opacity: 0;
   }
 }
 @media screen and (max-width: 600px){
@@ -100,8 +109,8 @@
   animation-duration: 2s;
 }
 @keyframes desapear {
-  from {opacity: 1  }
-  to {opacity: 0;  }
+  from {opacity: 1;}
+  to {opacity: 0;}
 }
 
 .resize-left{
