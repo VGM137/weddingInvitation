@@ -20,6 +20,11 @@ const initialState = {
     params: false,
     name: '',
     tickets: '',
+    children: ''
+  },
+  form: {
+    checked: false,
+    tickets: ''
   },
 }
 

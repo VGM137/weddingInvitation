@@ -27,3 +27,18 @@ export const windowResize = (payload) => ({
   type: "PERSONAL_INVITATION",
   payload 
  });
+
+ export const formChange = (payload) => ({
+  type: 'FORM_CHANGE',
+  payload,
+});
+
+export const confirmation = (payload) => ({
+  type: 'CONFIRMATION',
+  payload,
+});
+
+export const clearForm = (payload) => ({
+  type: 'CLEAR_FORM',
+  payload,
+});

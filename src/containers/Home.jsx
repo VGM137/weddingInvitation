@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router';
 import { connect } from 'react-redux'
-import { windowResize, homeSize, isPersonalInvitation } from '../actions';
+import { windowResize, homeSize, isPersonalInvitation, formChange } from '../actions';
 import Carousel from '../components/Carousel';
 import PhotosContainer from '../components/PhotosContainer';
 import '../assets/styles/components/Home.scss'
@@ -56,12 +56,14 @@ const Home = (props) => {
     {
       params: 'hermelinda-santana',
       name: 'Hermelinda Santana',
-      tickets: 4
+      tickets: 4,
+      children: 1,
     },
     {
       params: 'fam-mendieta-laguna',
       name: 'Fam. Mendieta Laguna',
-      tickets: 4
+      tickets: 4,
+      children: 1,
     },
     {
       params: 'jorge-contreras',
@@ -91,7 +93,8 @@ const Home = (props) => {
     {
       params: 'daniel-diaz',
       name: 'Daniel Diaz',
-      tickets: 3
+      tickets: 3,
+      children: 1,
     },
     {
       params: 'doc-eduardo',
@@ -121,7 +124,8 @@ const Home = (props) => {
     {
       params: 'emmanuel-vallejo',
       name: 'Emmanuel Vallejo',
-      tickets: 3
+      tickets: 3,
+      children: 1,
     },
     {
       params: 'josefina-vallejo',
@@ -241,10 +245,12 @@ const Home = (props) => {
     let paramsInput = id.toString()
     invited.forEach(invited => {
       if(paramsInput == invited.params){
+        props.formChange(invited.tickets <= 1 ? invited.tickets : invited.tickets-1)
         props.isPersonalInvitation({
           params: true,
           name: invited.name,
           tickets: invited.tickets,
+          children: invited.children >= 1 ? invited.children : 0
         },)
       }
     })
@@ -309,6 +315,7 @@ const dispatchStateToPops = {
   windowResize,
   homeSize,
   isPersonalInvitation,
+  formChange
 }
 
 export default connect(mapSateToProps, dispatchStateToPops)(Home)

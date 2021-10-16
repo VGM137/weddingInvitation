@@ -1,6 +1,7 @@
 import React, {useRef, useState, useMemo, useEffect} from "react";
 import { connect } from "react-redux";
 import { displayPhoto } from "../actions";
+import Confirmation from "./Confirmation";
 import Frame from "./Frame";
 import Stamp from '../assets/static/stamp.svg'
 import '../assets/styles/components/PersonalInvitation.scss'
@@ -32,6 +33,7 @@ const PersonalInvitation = (props) => {
         entry.target.childNodes[0].style.display = 'block'
 
         children.forEach(child => {
+
           if(child.classList == 'ticket-deco'){
             child.childNodes.forEach(children => {
               if(children.classList[0] !== 'ticket-stamp'){
@@ -80,8 +82,11 @@ const PersonalInvitation = (props) => {
         setTimeout(() => {
           children.forEach(child => {
             console.log(child)
-            if(child.classList[0] !== 'ticket-deco' && child.classList[0] !== 'frame-container'){
-              child.style.display = 'inline-block'
+            if(child.classList[0] == 'form'){
+              child.style.display = 'flex'
+            }
+            if(child.classList[0] !== 'form' && child.classList[0] !== 'ticket-deco' && child.classList[0] !== 'frame-container'){
+              child.style.display = 'flex'
               child.classList.add('invitationFadeUp')
             }
           })
@@ -152,11 +157,18 @@ const PersonalInvitation = (props) => {
             <Frame specific={'invitation-frame'} />
             <h1 id='ticket-main-text' className='ticket-main-text'>{`Hola ${invitation.name}`}</h1>
             <h2 id='ticket-secondary-text' className='ticket-secondary-text'>Estamos muy felices por la celebración de nuestra unión y nos encantaría que nos acompañes.</h2>
-          
+
             {invitation.tickets > 1
               ?
                 <>
-                  <h2 id='ticket-secondary-text' className='ticket-secondary-text'>Esta invitación es para ti y {invitation.tickets == 2 ? 'una persona más.' : `${invitation.tickets} personas más.`}</h2>
+                  <h2 id='ticket-secondary-text' className='ticket-secondary-text'>
+                    {invitation.children < 1
+                      ?
+                        `Esta invitación es para ti y ${invitation.tickets == 2 ? 'una persona más.' : `${invitation.tickets-1} personas más.`}`
+                      : 
+                        `Esta invitación es para ti ${invitation.tickets == 2 ? 'y un niño.' : ` ${invitation.tickets-2} ${invitation.tickets-2 == 1 ? 'adulto' : 'adultos'} y ${invitation.children} ${invitation.children == 1 ? 'niño' : 'niños'}`}`
+                    }
+                  </h2>
                   <h2 id='ticket-secondary-text' className='ticket-secondary-text'>Te esperamos con mucho gusto para compartir este día tan especial contigo y tus invitados.</h2>
                 </>
               :
@@ -164,6 +176,7 @@ const PersonalInvitation = (props) => {
                   <h2 id='ticket-secondary-text' className='ticket-secondary-text'>Tu invitación es individual, te esperamos con mucho gusto para compartir este día tan especial contigo.</h2>
                 </>
             }
+            <Confirmation />
           </div>
         </div>
       :

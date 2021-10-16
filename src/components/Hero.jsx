@@ -22,7 +22,6 @@ const Hero = (props) => {
   const callbackFunction = entries => {
     const [entry] = entries
     let intersectionRatio = Math.round(entry.intersectionRatio* 10)/10
-    console.log(entry)
     if(intersectionRatio == 1){
       doAnimate = false
     }

@@ -38,6 +38,32 @@ const reducer = (state, action) => {
         isPersonalInvitation: action.payload
       }
 
+      case 'FORM_CHANGE':
+          return {
+            ...state,
+            form: {
+              checked: state.form.checked,
+              tickets: action.payload,
+            }
+          }
+
+      case 'CONFIRMATION':
+          return {
+            ...state,
+            form: {
+              checked: action.payload,
+              tickets: state.form.tickets,
+            }
+          }
+
+      case 'CLEAR_FORM':
+        return{
+          ...state,
+          form: {
+            tickets: '',
+          }
+        }
+
     default :
     return state;
   }
