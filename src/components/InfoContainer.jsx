@@ -152,7 +152,6 @@ const InfoContainer = (props) => {
             <div className='event-location'>
               <h1 id='main-text' className='main-text'>Mapa:</h1>
               <div className='event-location-container'>
-                {/* <MapDeco className='map-deco' /> */}
                 <iframe 
                   id='google-map'
                   className='google-map'
@@ -194,7 +193,7 @@ const InfoContainer = (props) => {
           <div className='facebook-container' >
             <a href="https://www.facebook.com/groups/767548173909504/" target="_blank" rel="noopener noreferrer">
               ¡Escribenos en Facebook!
-              <Facebook height='auto' />
+              <Facebook />
             </a>
           </div>
         </div>
