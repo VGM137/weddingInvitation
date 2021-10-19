@@ -10,7 +10,6 @@ const Hero = (props) => {
   
   const handleLoad = async (e) => {
     props.heroSize(e.target.parentElement.parentElement.clientHeight)
-    let text = await e.target.parentElement.parentElement.childNodes[0]
     props.displayPhoto(e.target.parentElement.parentElement.classList[0])
   }
 
@@ -28,7 +27,6 @@ const Hero = (props) => {
 
     if(doAnimate == true){
       if(intersectionRatio >= 0.2){
-        console.log(entry.target.classList[0])
         props.displayPhoto(entry.target.classList[0])
         let children = entry.target.childNodes
         children[0].classList.add('apear')
@@ -36,9 +34,6 @@ const Hero = (props) => {
           setTimeout(() => {
             children[0].classList.remove('apear')
           }, 2200); 
-          /*
-          children.forEach(child => child.classList.add('apear'))
-          */
         }
       }
       

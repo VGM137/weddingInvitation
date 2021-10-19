@@ -1,6 +1,7 @@
 import React, {useRef, useState, useMemo, useEffect} from "react";
 import { connect, useSelector, useDispatch  } from "react-redux";
 import { displayPhoto } from "../actions";
+import Frame from "./Frame";
 
 const TextSection = ({specific, childrenSpecific, children}) => {
 
@@ -14,7 +15,6 @@ const TextSection = ({specific, childrenSpecific, children}) => {
   const callbackFunction = entries => {
     const [entry] = entries
     let intersectionRatio = Math.round(entry.intersectionRatio* 10)/10
-    /* console.log(entry) */
 
     if(intersectionRatio == 1){
       doAnimate = false
@@ -22,7 +22,6 @@ const TextSection = ({specific, childrenSpecific, children}) => {
 
     if(entry.target.classList[1] == 'hero'){
       dispatch(displayPhoto(entry.target.classList[1]))
-      /* console.log(entry) */
       entry.target.childNodes[0].style.display = 'block'
     }
     
@@ -33,28 +32,26 @@ const TextSection = ({specific, childrenSpecific, children}) => {
     if(doAnimate == true){
       if(intersectionRatio == 0.2){
         dispatch(displayPhoto(entry.target.classList[1]))
-        let children = entry.target.childNodes[0].childNodes
-        console.log(children)
+        document.getElementById('photos-container').classList.add('grow')
+        entry.target.childNodes[0].style.display = 'grid'
+        entry.target.childNodes[0].classList.add('frameApear')
+
+        let children = entry.target.childNodes[1].childNodes
         if(entry.target.classList[1] !== 'event' && entry.target.classList[1] !== 'hero'){
-          entry.target.childNodes[0].style.display = 'flex'
+          entry.target.childNodes[1].style.display = 'flex'
           children.forEach(child => {
-            if(child.classList[0] == 'frame-container'){
-              child.classList.add('frameApear')
-            }else if(child.classList[0] == 'info-cover'){
+            if(child.classList[0] == 'info-cover'){
               child.classList.add('fadeOut')}
             })
           setTimeout(() => {
             children.forEach(child => {
-              /* child.classList.remove('fadeOut') */
               child.classList.remove('apear')
             })
           }, 2200);
-        }else if(entry.target.classList[1] !== 'hero'){
-          entry.target.childNodes[0].style.display = 'flex'
+        }else if(entry.target.classList[1] == 'event'){
+          entry.target.childNodes[1].style.display = 'flex'
           children.forEach(child => {
-            if(child.classList[0] == 'frame-container'){
-              child.classList.add('frameApear')
-            }else if(child.classList[0] == 'info-cover'){
+            if(child.classList[0] == 'info-cover'){
               child.classList.add('fadeOut')}
             })
           setTimeout(() => {
@@ -69,7 +66,8 @@ const TextSection = ({specific, childrenSpecific, children}) => {
 
     if(intersectionRatio <= 0.1){
       doAnimate = true
-      entry.target.childNodes[0].style.display = 'none'
+      entry.target.childNodes[1].style.display = 'none'
+      document.getElementById('photos-container').classList.remove('grow')
     }
 
     setVisible(entry.isIntersecting)
@@ -114,6 +112,7 @@ const TextSection = ({specific, childrenSpecific, children}) => {
       className={`text-section ${specific}`}
       ref={targetRef}
     >
+      <Frame />
       <div id='text-container' className={`text-container ${childrenSpecific}`}>
         {children}
       </div>

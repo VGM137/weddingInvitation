@@ -10,7 +10,8 @@ const PhotoFourteen = () => {
         id='photoFourteen' 
         className='photoFourteen' 
         src={photoFourteen} 
-        alt="Foto 10" 
+        alt="Foto 14" 
+        loading='lazy'
       />
     </div>
   )

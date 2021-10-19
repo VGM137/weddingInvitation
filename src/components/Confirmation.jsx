@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useForm } from '@formspree/react';
-import { connect, useSelector, useDispatch  } from 'react-redux';
+import { connect } from 'react-redux';
 import { formChange, confirmation, handleSubmission } from '../actions'
 import '../assets/styles/components/Confirmation.scss'
 import SubmitMessage from '../components/SubmitMessage'
@@ -16,7 +16,6 @@ const Confirmation = (props) => {
   const [state, handleSubmit] = useForm("xleakdez");
 
   const handleChange = (e) => {
-    console.log(e.target.value)
     if(e.target.value == ''){
       props.formChange([])
     }else{
@@ -26,11 +25,9 @@ const Confirmation = (props) => {
 
   const handleClick = (e) => {
     props.confirmation(e.target.checked)
-    console.log(confirm)
   }
   
   if (state.succeeded) {
-    console.log(state)
     return (
       <SubmitMessage />
     )
@@ -61,7 +58,6 @@ const Confirmation = (props) => {
                 type="number" 
                 max={invitationTickets-1}
                 min={0}
-                /* defaultValue={invitationTickets} */
                 name="tickets" 
                 id="form-tickets" 
                 className="form-tickets form-item" 

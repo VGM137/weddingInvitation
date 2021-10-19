@@ -14,6 +14,7 @@ import Theme4 from '../assets/static/theme4.svg'
 import Date from '../assets/static/date.svg'
 import Knot from '../assets/static/knot.svg'
 import MapDeco from '../assets/static/mapDeco.svg'
+import Facebook from '../assets/static/facebook.svg'
 import '../assets/styles/components/InfoContainer.scss'
 
 
@@ -29,8 +30,7 @@ const InfoContainer = (props) => {
       
       <Hero/>
       
-      <TextSection specific='engaged-couple'>
-        {/* <Frame /> */}
+      <TextSection specific='engaged-couple' loading='lazy'>
         <div className='info-cover' id='info-cover'></div>
         <div id='info-content' className='info-content info-engaged'>
           <div id='info-engaged-img-container' 
@@ -51,8 +51,7 @@ const InfoContainer = (props) => {
         </div>
       </TextSection>
 
-      <TextSection specific='parents'>
-        {/* <Frame /> */}
+      <TextSection specific='parents' loading='lazy'>
         <div className='info-cover' id='info-cover'></div>
         <div id='info-content' className='info-content info-parents'>
           <h1 id='main-text' className='main-text'>Nuestros padres:</h1>
@@ -79,23 +78,21 @@ const InfoContainer = (props) => {
       </TextSection>
 
       <TextSection specific='knot' >
-        <Frame />
         <div className='info-cover' id='info-cover'></div>
         <div className='info-content'>
-          <h2 className='secondary-text'>
-            {`UNO SOLO PUEDE SER VENCIDO, PERO DOS PUEDEN RESISTIR;`}
+          <h2 className='main-text knot-text'>
+            {`Uno solo puede ser vencido, pero dos pueden resistir;`}
           </h2>
           <div className='knot-img-container'>
             <Knot className='knot-img' />
           </div>
-          <h2 className='secondary-text'>  
-            {`CORDÓN DE TRES DOBLECES NO SE ROMPE FACILMENTE.`}
-          </h2>
+          <h1 className='main-text knot-text'>  
+            {`Cordón de tres dobleces no se rompe facilmente.`}
+          </h1>
         </div>
       </TextSection>
 
       <TextSection specific='good-parents'>
-        <Frame />
         <div className='info-cover' id='info-cover'></div>
         <div id='info-content' className='info-content'>
           <h1 id='main-text' className='main-text'>Nuestros Padrinos:</h1>
@@ -109,6 +106,8 @@ const InfoContainer = (props) => {
           <h2 id='secondary-text' className='secondary-text'>Eduardo Hernández</h2>
           <h2 id='secondary-text' className='secondary-text'>Bibiana Álvarez</h2>
           <h2 id='secondary-text' className='secondary-text'>Luis y Lidia Monsalvo</h2>
+          <h2 id='secondary-text' className='secondary-text'>Ana Ceja</h2>
+          <h2 id='secondary-text' className='secondary-text'>Dalia y Abigail Valerio</h2>
           <div id='deco-element-container' className='deco-element-container'>
             <Theme2 id='deco-element-img' className='deco-element-img' />
           </div>
@@ -116,7 +115,6 @@ const InfoContainer = (props) => {
       </TextSection>
 
       <TextSection specific='ladies'>
-        <Frame />
         <div className='info-cover' id='info-cover'></div>
         <div id='info-content' className='info-content'>
           <h1 id='main-text' className='main-text'>Damas de Honor</h1>
@@ -131,7 +129,6 @@ const InfoContainer = (props) => {
       </TextSection>
 
       <TextSection specific='grooms'>
-        <Frame />
         <div className='info-cover' id='info-cover'></div>
         <div id='info-content' className='info-content'>
           <h1 id='main-text' className='main-text'>Caballeros de Honor</h1>
@@ -146,7 +143,6 @@ const InfoContainer = (props) => {
       </TextSection>
 
       <TextSection specific='event' childrenSpecific='text-container-event'>
-        <Frame specific='event-frame'/>
         <div className='info-cover' id='info-cover'></div>
         <div id='info-content' className='info-content'>
           <div id='deco-date-container' className='deco-date-container'>
@@ -184,7 +180,6 @@ const InfoContainer = (props) => {
       <PersonalInvitation />
 
       <TextSection specific='social'>
-        <Frame />
         <div className='info-cover' id='info-cover'></div>
         <div className='info-content'>
           <h1 className='main-text'>No faltes</h1>
@@ -196,11 +191,16 @@ const InfoContainer = (props) => {
             {`Escribenos un mensaje con tus mejores deseos, queremos compartir este momento contigo y tus invitados y es muy importante para nosotros que nos apoyes.
             Entra al link de nuestro muro de facebook y confirma tu asistencia dejandonos saber que contamos contigo para festejar nuestra unión.`}</h3>
           <h3 className='third-text hashtag'>{'#NuestraBodaJ&R'}</h3>
+          <div className='facebook-container' >
+            <a href="https://www.facebook.com/groups/767548173909504/" target="_blank" rel="noopener noreferrer">
+              ¡Escribenos en Facebook!
+              <Facebook height='auto' />
+            </a>
+          </div>
         </div>
       </TextSection>
 
       <TextSection specific='health-protocol'>
-        <Frame />
         <div className='info-cover' id='info-cover'></div>
         <div className='info-content health-content'>
           <h1 className='main-text'>Protocolo de salud</h1>

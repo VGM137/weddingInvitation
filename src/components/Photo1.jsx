@@ -5,12 +5,13 @@ import '../assets/styles/components/Photo.scss'
 
 const PhotoOne = () => {
   return(
-    <div id='photoOne-container' className='photoOne-container'>
+    <div id='photoOne-container' className='photoOne-container' >
       <img 
         id='photoOne' 
         className='photoOne' 
         src={photoOne} 
         alt="Foto 1" 
+        loading='lazy'
       />
     </div>
   )

@@ -19,7 +19,6 @@ const PersonalInvitation = (props) => {
   const callbackFunction = entries => {
     const [entry] = entries
     let intersectionRatio = Math.round(entry.intersectionRatio* 10)/10
-    console.log(entry)
     if(intersectionRatio == 1){
       doAnimate = false
     }
@@ -29,7 +28,7 @@ const PersonalInvitation = (props) => {
       if(intersectionRatio == 0.2){
         
         props.displayPhoto(entry.target.classList[0])
-
+        document.getElementById('photos-container').classList.add('grow')
         entry.target.childNodes[0].style.display = 'block'
 
         children.forEach(child => {
@@ -81,7 +80,6 @@ const PersonalInvitation = (props) => {
 
         setTimeout(() => {
           children.forEach(child => {
-            console.log(child)
             if(child.classList[0] == 'form'){
               child.style.display = 'flex'
             }
@@ -103,7 +101,7 @@ const PersonalInvitation = (props) => {
 
     if(intersectionRatio <= 0.1){
       doAnimate = true
-      
+      document.getElementById('photos-container').classList.remove('grow')
       entry.target.childNodes[0].style.display = 'none'
     }
 
@@ -154,7 +152,7 @@ const PersonalInvitation = (props) => {
               <div className='ticket-right-cover'></div>
               <Stamp className='ticket-stamp'/>
             </div>
-            <Frame specific={'invitation-frame'} />
+            <Frame  />
             <h1 id='ticket-main-text' className='ticket-main-text'>{`Hola ${invitation.name}`}</h1>
             <h2 id='ticket-secondary-text' className='ticket-secondary-text'>Estamos muy felices por la celebración de nuestra unión y nos encantaría que nos acompañes.</h2>
 

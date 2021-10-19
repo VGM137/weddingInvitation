@@ -11,6 +11,7 @@ const PhotoFifteen = () => {
         className='photoFifteen' 
         src={photoFifteen} 
         alt="Foto 15" 
+        loading='lazy'
       />
     </div>
   )

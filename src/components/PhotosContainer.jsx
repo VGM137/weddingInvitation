@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { photoContainerSize } from "../actions";
+import Frame from "./Frame";
 import Photo1 from "./Photo1";
 import Photo2 from "./Photo2";
 import Photo3 from "./Photo3";
@@ -40,21 +41,10 @@ const PhotosContainer = (props) => {
   }
 
   return(
-    <div id='photos-container' className='photos-container' onLoad={(e) => handleLoad(e)}>
+    <div id='photos-container' className='photos-container' loading='lazy' onLoad={(e) => handleLoad(e)}>
         {isHero &&
           <>
             <Photo11/>
-            {/* <div id='portrait' className='portrait'>
-              <Photo4/>
-            </div>
-            <PhotoFooter>
-              <Names className='names'/>
-              <div className='photos-secondary-text'>
-                <h2>
-                  {`Porque la vida se torno de colores cuando entraste en mi vida.`}
-                </h2>
-              </div>  
-            </PhotoFooter> */}
           </>
         }
         {isFirstPhoto &&
@@ -68,12 +58,11 @@ const PhotosContainer = (props) => {
               <Photo3/>
             </div>
             <PhotoFooter>
-              <div className='photos-secondary-text'>
-                <h2>
-                {`MOTIVADOS POR EL AMOR QUE NOS TENEMOS, CON ALEGRIA,
-                
-                  LA BENDICION DE DIOS Y NUESTROS PADRES.`}
-                </h2>
+              <div >
+                <h1 className='footer-main-text'>
+                {`Motivados por el amor que nos tenemos, con alegria,
+                  la bendicion de dios y nuestros padres.`}
+                </h1>
               </div> 
             </PhotoFooter>
           </>
@@ -92,23 +81,11 @@ const PhotosContainer = (props) => {
         {isKnotPhoto &&
           <>
             <Photo12 />
-            {/* <div id='portrait' className='portrait'>
-              <Photo3/>
-            </div>
-            <PhotoFooter>
-              <Names className='previous'/>
-            </PhotoFooter> */}
           </>
         }
         {isFourthPhoto &&
           <>
             <Photo15 />
-            {/* <div id='portrait' className='portrait'>
-              <Photo5/>
-            </div>
-            <PhotoFooter>
-              <Names className='previous'/>
-            </PhotoFooter> */}
           </>
         }
         {isFifthPhoto &&
@@ -116,7 +93,7 @@ const PhotosContainer = (props) => {
             <div id='portrait' className='portrait'>
               <Photo6/>
             </div>
-            <PhotoFooter>
+            <PhotoFooter specific='previous-footer'>
               <Names className='previous'/>
             </PhotoFooter>
           </>
@@ -127,13 +104,13 @@ const PhotosContainer = (props) => {
               <Photo7/>
             </div>
             <PhotoFooter>
-              <div className='photos-secondary-text'>
-                <h2>
-                {`EL LUGAR DONDE INICIA 
-                  EL TAN ANHELADO MOMENTO,
-
-                  CUANDO EL PRINCIPE 
-                  RESCATA A SU PRINCESA`}
+              <div >
+                
+                <h2 className='footer-main-text'>
+                {`El lugar donde inicia 
+                  el tan anhelado momento,
+                  cuando el principe 
+                  rescata a su princesa`}
                 </h2>
               </div> 
             </PhotoFooter>

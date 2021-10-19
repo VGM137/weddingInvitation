@@ -5,17 +5,10 @@ import { windowResize, homeSize, isPersonalInvitation, formChange } from '../act
 import Carousel from '../components/Carousel';
 import PhotosContainer from '../components/PhotosContainer';
 import '../assets/styles/components/Home.scss'
-/*  */
-/* import InvitedPeople from '../utils/invited.ts'; */
 
 const Home = (props) => {
 
-  let isMobile = props.windowSize.width < 768
-  let isFirstPhoto = props.currentPhoto == '' || props.currentPhoto == 'engaged-couple'
-
   let { id } = useParams();
-/* 
-  new InvitedPeople(id) */
 
   const invited = [
     {
@@ -273,7 +266,6 @@ const Home = (props) => {
     if(scrollTop == e.target.clientHeight){
       setTimeout(() => {
         e.target.childNodes[1].style.bottom = 0
-        console.log(e.target.childNodes[1])
       }, 500);
     }
 
@@ -295,7 +287,6 @@ const Home = (props) => {
       onScroll={handleScroll} 
       onLoad={handleLoad}
     >
-      
       <PhotosContainer/>
       <Carousel/>
     </section>

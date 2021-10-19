@@ -5,7 +5,7 @@ import '../assets/styles/components/Photo.scss'
 
 const PhotoEight = () => {
   return(
-    <div id='photoEight-container' className='photoEight-container photo-container'>
+    <div id='photoEight-container' className='photoEight-container photo-container' loading='lazy'>
       <img 
         id='photoEight' 
         className='photoEight photo' 

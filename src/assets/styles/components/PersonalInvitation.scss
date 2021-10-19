@@ -19,6 +19,7 @@
   max-width: 70%;
   justify-content: center;
   color: #E6E6E6;
+  font-weight: 200;
 }
 .ticket-secondary-text{
   font-size: 1.5em;
@@ -27,8 +28,8 @@
   font-weight: 200;
   display: none;
   vertical-align: middle;
-  width: 100%;
-  padding: 10px 150px 0 250px;
+  width: 75%;
+  padding: 10px 0px;
   box-sizing: border-box;
   color: #E6E6E6;
 }
@@ -81,8 +82,8 @@
     font-size: 2.2em;
   }
   .ticket-secondary-text{
-    font-size: 1.2em;
-    padding: 10px 140px 0 200px;
+    font-size: 1.1em;
+    padding: 10px 0px;
   }
   .ticket-stamp{
     position: absolute;
@@ -96,13 +97,13 @@
 }
 @media screen and (max-width: 600px){
   .ticket-secondary-text{
-    padding: 10px 40px 0 70px;
+    padding: 5px 0px;
 
   }
 }
 @media screen and (max-width: 321px){
   .ticket-secondary-text{
-    padding: 10px 20px 0 50px;
+    padding: 5px 0px;
   }
 }
 
