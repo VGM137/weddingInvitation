@@ -1,8 +1,8 @@
 .submit-container{
   height: fit-content;
   min-height: 110px;
-  width: 90%;
-  margin: 20px auto;
+  width: 80%;
+  margin: 5px auto;
   border-radius: 20px;
   background-color: #6dc66d;
   padding: 10px;
@@ -19,7 +19,7 @@
 
 @media screen and (max-width: 620px){
   .submit-message{
-    margin: 20px 30px;
+    margin: 5px 15px;
     font-size: 1.1em;
   }
 }

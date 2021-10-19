@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useForm } from '@formspree/react';
 import { connect, useSelector, useDispatch  } from 'react-redux';
-import { formChange, confirmation } from '../actions'
+import { formChange, confirmation, handleSubmission } from '../actions'
 import '../assets/styles/components/Confirmation.scss'
 import SubmitMessage from '../components/SubmitMessage'
 import SubmitError from '../components/SubmitError'
@@ -99,13 +99,15 @@ const mapStateToProps = (state) => {
     invitationName: state.isPersonalInvitation.name,
     invitationTickets: state.isPersonalInvitation.tickets,
     checked: state.form.checked,
-    formTickets: state.form.tickets
+    formTickets: state.form.tickets,
+    submission: state.submission
   }
 }
 
 const dispatchStateToProps = {
   formChange,
-  confirmation
+  confirmation,
+  handleSubmission,
 }
 
 export default connect(mapStateToProps, dispatchStateToProps)(Confirmation);

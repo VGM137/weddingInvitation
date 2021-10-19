@@ -42,3 +42,8 @@ export const clearForm = (payload) => ({
   type: 'CLEAR_FORM',
   payload,
 });
+
+export const handleSubmission = (payload) => ({
+  type: 'SUBMISSION',
+  payload,
+});

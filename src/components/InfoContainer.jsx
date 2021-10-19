@@ -12,6 +12,7 @@ import Theme2 from '../assets/static/theme2.svg'
 import Theme3 from '../assets/static/theme3.svg'
 import Theme4 from '../assets/static/theme4.svg'
 import Date from '../assets/static/date.svg'
+import Knot from '../assets/static/knot.svg'
 import MapDeco from '../assets/static/mapDeco.svg'
 import '../assets/styles/components/InfoContainer.scss'
 
@@ -29,30 +30,31 @@ const InfoContainer = (props) => {
       <Hero/>
       
       <TextSection specific='engaged-couple'>
-        <Frame />
+        {/* <Frame /> */}
         <div className='info-cover' id='info-cover'></div>
-        <div id='info-content' className='info-content'>
+        <div id='info-content' className='info-content info-engaged'>
           <div id='info-engaged-img-container' 
             className='info-engaged-img-container'>
             <EngagedPhoto id='info-engaged-img' className='info-engaged-img' />
           </div>
-          <h1 id='main-text' className='main-text'>Novios:</h1>
-          <h2 id='secondary-text' className='secondary-text'>
-            {`Jazmín Adriana 
-              Flores Santana`}</h2>
+          <h1 id='main-text' className='main-text'>
+            {`Jazmín    &   Rodrigo`}</h1>
           <div id='engaged-rings-container' className='engaged-rings-container'>
             <Rings id='engaged-rings' className='engaged-rings' />
           </div>
-          <h2 id='secondary-text' className='secondary-text'>
-            {`José Rodrigo 
-              Vallejo Hernández`}</h2>
+          <h2 className='secondary-text engaged-phrase'>
+            {`Cuando te das cuenta que deseas pasar el resto de tu vida con alguien,
+            `}
+            <b>{`quieres que el resto de tu vida comience lo antes posible.`}
+            </b>
+          </h2>
         </div>
       </TextSection>
 
       <TextSection specific='parents'>
-        <Frame />
+        {/* <Frame /> */}
         <div className='info-cover' id='info-cover'></div>
-        <div id='info-content' className='info-content'>
+        <div id='info-content' className='info-content info-parents'>
           <h1 id='main-text' className='main-text'>Nuestros padres:</h1>
           <h2 id='secondary-text' className='secondary-text'>
             {`Graciela 
@@ -73,6 +75,22 @@ const InfoContainer = (props) => {
 
               José Rodrigo 
               Vallejo Calderon`}</h2>
+        </div>
+      </TextSection>
+
+      <TextSection specific='knot' >
+        <Frame />
+        <div className='info-cover' id='info-cover'></div>
+        <div className='info-content'>
+          <h2 className='secondary-text'>
+            {`UNO SOLO PUEDE SER VENCIDO, PERO DOS PUEDEN RESISTIR;`}
+          </h2>
+          <div className='knot-img-container'>
+            <Knot className='knot-img' />
+          </div>
+          <h2 className='secondary-text'>  
+            {`CORDÓN DE TRES DOBLECES NO SE ROMPE FACILMENTE.`}
+          </h2>
         </div>
       </TextSection>
 
@@ -164,6 +182,38 @@ const InfoContainer = (props) => {
       </TextSection>
 
       <PersonalInvitation />
+
+      <TextSection specific='social'>
+        <Frame />
+        <div className='info-cover' id='info-cover'></div>
+        <div className='info-content'>
+          <h1 className='main-text'>No faltes</h1>
+          <h3 className='third-text'>El regalo es opcional, pero lo más importante para nosotros es tu compañia</h3>
+          <h1 className='main-text'>Codigo de vestimenta</h1>
+          <h3 className='third-text'>Etiqueta</h3>
+          <h1 className='main-text'>Redes sociales</h1>
+          <h3 className='third-text'>
+            {`Escribenos un mensaje con tus mejores deseos, queremos compartir este momento contigo y tus invitados y es muy importante para nosotros que nos apoyes.
+            Entra al link de nuestro muro de facebook y confirma tu asistencia dejandonos saber que contamos contigo para festejar nuestra unión.`}</h3>
+          <h3 className='third-text hashtag'>{'#NuestraBodaJ&R'}</h3>
+        </div>
+      </TextSection>
+
+      <TextSection specific='health-protocol'>
+        <Frame />
+        <div className='info-cover' id='info-cover'></div>
+        <div className='info-content health-content'>
+          <h1 className='main-text'>Protocolo de salud</h1>
+          <h2 className='secondary-text'>Medidas de higiene y seguridad:</h2>
+          <ol className='health-protocol-list'>
+            <li className='secondary-text'>1. Por favor porta el cubrebocas todo el tiempo posible</li>
+            <li className='secondary-text'>2. Procura llevar tu gel antibacterial y utilizarlo con frecuencia</li>
+            <li className='secondary-text'>3. Permite que el personal revise la temperatura a la entrada del evento</li>
+            <li className='secondary-text'>4. Lava tus manos antes y despues de comer o cada vez que te levantes de tu mesa </li>
+            <li className='secondary-text'>5. Si sientes algún síntoma previo al evento háznoslo saber, nosotros comprenderemos tu ausencia</li>
+          </ol>
+        </div>
+      </TextSection>
 
     </div>
   )

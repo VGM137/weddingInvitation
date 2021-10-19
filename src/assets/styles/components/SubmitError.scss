@@ -1,8 +1,8 @@
 .error-container{
   height: fit-content;
-  min-height: 110px;
+/*   min-height: 110px; */
   width: 90%;
-  margin: 20px auto;
+  margin: 5px auto;
   border-radius: 20px;
   background-color: #c2c2c281;
   padding: 10px;
@@ -18,8 +18,8 @@
 }
 
 @media screen and (max-width: 620px){
-  .submit-message{
-    margin: 20px 30px;
+  .error-message{
+    margin: 5px 15px;
     font-size: 1.1em;
   }
 }

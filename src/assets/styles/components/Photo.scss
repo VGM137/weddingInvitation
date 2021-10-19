@@ -30,7 +30,7 @@
   transform: scale(1.1)
 }
 .photoOne{
-  filter: brightness(.8);
+  filter: brightness(.7);
   z-index: 0;
   height: auto;
   width: 100%;
@@ -55,6 +55,21 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.photoNine-container, .photoTen-container, .photoEleven-container, .photoTwelve-container, .photoFourteen-container, .photoThirteen-container, .photoFifteen-container{
+  display: block;
+  height: 100vh;
+  margin: 0 auto;
+  width: auto;
+  position: absolute;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.photoNine, .photoTen, .photoEleven, .photoTwelve, .photoThirteen, .photoFourteen, .photoFifteen{
+  height: 100%;
+  width: auto;
 }
 
 

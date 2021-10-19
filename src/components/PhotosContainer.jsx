@@ -11,6 +11,11 @@ import Photo7 from "./Photo7";
 import Photo8 from "./Photo8";
 import Photo9 from "./Photo9";
 import Photo10 from "./Photo10";
+import Photo11 from "./Photo11";
+import Photo12 from "./Photo12";
+import Photo13 from "./Photo13";
+import Photo14 from "./Photo14";
+import Photo15 from "./Photo15";
 import PhotoFooter  from './PhotoFooter.jsx'
 import Names from '../assets/static/names.svg'
 import '../assets/styles/components/PhotosContainer.scss'
@@ -21,12 +26,15 @@ const PhotosContainer = (props) => {
   let isHero = props.currentPhoto == '' || props.currentPhoto == 'hero'
   let isFirstPhoto = props.currentPhoto == 'engaged-couple'
   let isSecondPhoto = props.currentPhoto == 'parents'
+  let isKnotPhoto = props.currentPhoto == 'knot'
   let isThirdPhoto = props.currentPhoto == 'good-parents'
   let isFourthPhoto = props.currentPhoto == 'ladies'
   let isFifthPhoto = props.currentPhoto == 'grooms'
   let isSixthPhoto = props.currentPhoto == 'event'
   let isSeventhPhoto = props.currentPhoto == 'personal-invitation'
-
+  let isEightPhoto = props.currentPhoto == 'social'
+  let isNinthPhoto = props.currentPhoto == 'health-protocol'
+  
   const handleLoad = (e) => {
       props.photoContainerSize(e.target.parentElement.parentElement.clientHeight)
   }
@@ -35,7 +43,8 @@ const PhotosContainer = (props) => {
     <div id='photos-container' className='photos-container' onLoad={(e) => handleLoad(e)}>
         {isHero &&
           <>
-            <div id='portrait' className='portrait'>
+            <Photo11/>
+            {/* <div id='portrait' className='portrait'>
               <Photo4/>
             </div>
             <PhotoFooter>
@@ -45,13 +54,18 @@ const PhotosContainer = (props) => {
                   {`Porque la vida se torno de colores cuando entraste en mi vida.`}
                 </h2>
               </div>  
-            </PhotoFooter>
+            </PhotoFooter> */}
           </>
         }
         {isFirstPhoto &&
           <>
+            <Photo10/>
+          </>
+        }
+        {isSecondPhoto &&
+          <>
             <div id='portrait' className='portrait'>
-              <Photo8/>
+              <Photo3/>
             </div>
             <PhotoFooter>
               <div className='photos-secondary-text'>
@@ -64,48 +78,37 @@ const PhotosContainer = (props) => {
             </PhotoFooter>
           </>
         }
-        {isSecondPhoto &&
-          <>
-            <div id='portrait' className='portrait'>
-              <Photo10/>
-            </div>
-            <PhotoFooter>
-              <div className='photos-secondary-text'>
-                <h2>
-                {`UNO SOLO PUEDE SER VENCIDO, PERO DOS PUEDEN RESISTIR;
-                
-                  CORDÓN DE TRES DOBLECES NO SE ROMPE FACILMENTE`}
-                </h2>
-              </div> 
-            </PhotoFooter>
-          </>
-        }
         {isThirdPhoto &&
           <>
-            <div id='portrait' className='portrait'>
+            <Photo9 />
+            {/* <div id='portrait' className='portrait'>
               <Photo3/>
             </div>
             <PhotoFooter>
-              <div className='photos-secondary-text'>
-                <h2>
-                  {`Cuando te das cuenta que deseas pasar el resto de tu vida con alguien,
-                  `}
-                  <b>{`
-                  QUIERES QUE EL RESTO DE TU VIDA COMIENCE LO ANTES POSIBLE.`}
-                  </b>
-                </h2>
-              </div>  
-            </PhotoFooter>
+              <Names className='previous'/>
+            </PhotoFooter> */}
+          </>
+        }
+        {isKnotPhoto &&
+          <>
+            <Photo12 />
+            {/* <div id='portrait' className='portrait'>
+              <Photo3/>
+            </div>
+            <PhotoFooter>
+              <Names className='previous'/>
+            </PhotoFooter> */}
           </>
         }
         {isFourthPhoto &&
           <>
-            <div id='portrait' className='portrait'>
+            <Photo15 />
+            {/* <div id='portrait' className='portrait'>
               <Photo5/>
             </div>
             <PhotoFooter>
               <Names className='previous'/>
-            </PhotoFooter>
+            </PhotoFooter> */}
           </>
         }
         {isFifthPhoto &&
@@ -138,12 +141,29 @@ const PhotosContainer = (props) => {
         }
         {isSeventhPhoto &&
           <>
-            <div id='portrait' className='portrait'>
+          <Photo9/>
+            {/* <div id='portrait' className='portrait'>
               <Photo2/>
             </div>
             <PhotoFooter>
               <Names className='previous'/>
-            </PhotoFooter>
+            </PhotoFooter> */}
+          </>
+        }
+        {isEightPhoto &&
+          <>
+            <Photo13/>
+            {/* <div id='portrait' className='portrait'>
+              <Photo2/>
+            </div>
+            <PhotoFooter>
+              <Names className='previous'/>
+            </PhotoFooter> */}
+          </>
+        }
+        {isNinthPhoto &&
+          <>
+            <Photo14/>
           </>
         }
     </div>

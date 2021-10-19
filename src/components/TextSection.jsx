@@ -34,6 +34,7 @@ const TextSection = ({specific, childrenSpecific, children}) => {
       if(intersectionRatio == 0.2){
         dispatch(displayPhoto(entry.target.classList[1]))
         let children = entry.target.childNodes[0].childNodes
+        console.log(children)
         if(entry.target.classList[1] !== 'event' && entry.target.classList[1] !== 'hero'){
           entry.target.childNodes[0].style.display = 'flex'
           children.forEach(child => {

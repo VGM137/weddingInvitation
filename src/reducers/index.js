@@ -60,8 +60,15 @@ const reducer = (state, action) => {
         return{
           ...state,
           form: {
-            tickets: '',
+            checked: false,
+            tickets: ''
           }
+        }
+
+      case 'SUBMISSION':
+        return{
+          ...state,
+          submission: action.payload
         }
 
     default :

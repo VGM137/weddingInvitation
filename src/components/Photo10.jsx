@@ -5,10 +5,10 @@ import '../assets/styles/components/Photo.scss'
 
 const PhotoTen = () => {
   return(
-    <div id='photoTen-container' className='photoTen-container photo-container'>
+    <div id='photoTen-container' className='photoTen-container'>
       <img 
         id='photoTen' 
-        className='photoTen photo' 
+        className='photoTen' 
         src={photoTen} 
         alt="Foto 10" 
       />

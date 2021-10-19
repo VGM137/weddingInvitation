@@ -1,9 +1,9 @@
 import React from "react";
 import { connect } from "react-redux";
-import FrameTL from '../assets/static/frameTL.svg'
-import FrameTR from '../assets/static/frameTR.svg'
-import FrameBL from '../assets/static/frameBL.svg'
-import FrameBR from '../assets/static/frameBR.svg'
+import FrameTL from '../assets/static/encaje1.svg'
+import FrameTR from '../assets/static/encaje2.svg'
+import FrameBL from '../assets/static/encaje3.svg'
+import FrameBR from '../assets/static/encaje4.svg'
 import '../assets/styles/components/Frame.scss'
 
 const Frame = ({specific}) => {

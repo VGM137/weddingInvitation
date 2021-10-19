@@ -18,21 +18,31 @@
   width: 100%;
   text-align: center;
   margin: auto;
-  justify-content: center;
+  /* justify-content: center; */
   display: flex;
   flex-direction: column;
   color: #E6E6E6;
   z-index: 1;
-  padding: 10px;
+  padding: 100px 10px 10px 10px;
   box-sizing: border-box;
 }
 .hero-text{
   margin: 0 0 15px 0;
   font-weight: 200;
 }
+.hero-text-name{
+  padding-bottom: 150px;
+/*   position: absolute;
+  font-size: .6em;
+  font-weight: 100;
+  width: 70%;
+  text-align: left;
+  line-height: .8em;
+  top: 20px; */
+}
 .hero-secondary-text{
   font-family: 'Ephesis', cursive;
-  font-size: .6em;
+  font-size: .8em;
   font-weight: 100;
   margin: 20px;
   position: absolute;
@@ -46,6 +56,47 @@
 .hero-img{
   width: auto;
   height: 100%;
+}
+.hero-footer{
+  bottom: 0;
+  box-sizing: border-box;
+  display: flex;
+  padding: 0 20px;
+  position: absolute;
+  width: 90%;
+  justify-self: center;
+  margin: 0 auto;
+  flex-direction: column;
+}
+.hero-footer-step1{
+  font-family: 'Ephesis', cursive;
+  font-size: .8em;
+  font-weight: 100;
+  left: 10px;
+  justify-content: flex-start;
+  line-height: .8em;
+  display: flex;
+  margin: 0 0 10px 0;
+}
+.hero-footer-step2{
+  font-family: 'Ephesis', cursive;
+  font-size: .8em;
+  font-weight: 100;
+  left: 10px;
+  justify-content: center;
+  line-height: .8em;
+  display: flex;
+  margin: 0 0 10px 0;
+}
+.hero-footer-step3{
+  font-family: 'Ephesis', cursive;
+  font-size: .8em;
+  font-weight: 100;
+  left: 10px;
+  justify-content: flex-end;
+  line-height: .8em;
+  display: flex;
+  margin: 0 0 10px 0;
 }
 
 @media screen and (max-width: 767px){

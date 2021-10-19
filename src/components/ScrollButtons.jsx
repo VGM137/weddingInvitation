@@ -6,11 +6,11 @@ const ScrollButton = ({specific}) => {
 
   const currentPhoto = useSelector(state => state.currentPhoto)
   const isPersonalInvitation = useSelector(state => state.isPersonalInvitation)
-  let isTheMiddle =   currentPhoto == 'engaged-couple' || currentPhoto == 'parents' || currentPhoto == 'good-parents' || currentPhoto == 'ladies' || currentPhoto == 'grooms'
-  let isTheMiddleWithInvitation =   currentPhoto == 'engaged-couple' || currentPhoto == 'parents' || currentPhoto == 'good-parents' || currentPhoto == 'ladies' || currentPhoto == 'grooms' || currentPhoto == 'event'
+  let isTheMiddle =   currentPhoto == 'engaged-couple' || currentPhoto == 'parents' || currentPhoto == 'knot' || currentPhoto == 'good-parents' || currentPhoto == 'ladies' || currentPhoto == 'grooms' || currentPhoto == 'event' || currentPhoto == 'personal-invitation' || currentPhoto == 'social'
+  /* let isTheMiddleWithInvitation =   currentPhoto == 'engaged-couple' || currentPhoto == 'parents' || currentPhoto == 'good-parents' || currentPhoto == 'ladies' || currentPhoto == 'grooms' || currentPhoto == 'event' */
   let isHero = currentPhoto == '' || currentPhoto == 'hero'
-  let isEvent = currentPhoto == 'event'
-  let isInvitation = currentPhoto == 'personal-invitation'
+  /* let isEvent = currentPhoto == 'event' */
+  let isHealthProtocol = currentPhoto == 'health-protocol'
 
 /*   const handleClick = (e, key) => {
     
@@ -140,7 +140,7 @@ const ScrollButton = ({specific}) => {
 
   return (
     <div id='buttons-container' className='buttons-container'>
-      {!isPersonalInvitation.params &&
+      
         <>
           {isHero &&
             <div
@@ -166,7 +166,7 @@ const ScrollButton = ({specific}) => {
               </div>
             </>
           }
-          {isEvent &&
+          {isHealthProtocol &&
             <div
               id='button-scroll-backward' 
               className={`button button-scroll-backward ${specific}`} 
@@ -175,43 +175,7 @@ const ScrollButton = ({specific}) => {
             </div>
           }
         </>
-      }
-      {isPersonalInvitation.params &&
-        <>
-          {isHero &&
-            <div 
-              id='button-scroll-forward' 
-              className={`button button-scroll-forward ${specific}`} 
-              /* onClick={(e) => handleClick(e, 'forward')} */>
-                {'»'}
-            </div>
-          }
-          {isTheMiddleWithInvitation &&
-            <>
-              <div 
-                id='button-scroll-backward' 
-                className={`button button-scroll-backward ${specific}`} 
-                /* onClick={(e) => handleClick(e, 'backward')} */>
-                  {'«'}
-              </div>
-              <div 
-                id='button-scroll-forward' 
-                className={`button button-scroll-forward ${specific}`} 
-                /* onClick={(e) => handleClick(e, 'forward')} */>
-                  {'»'}
-              </div>
-            </>
-          }
-          {isInvitation &&
-            <div 
-              id='button-scroll-backward' 
-              className={`button button-scroll-backward ${specific}`} 
-              /* onClick={(e) => handleClick(e, 'backward')} */>
-                {'«'}
-            </div>
-          }
-        </>
-      }
+      
     </div>
   )
 }
