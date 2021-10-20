@@ -186,7 +186,7 @@ const Home = (props) => {
       tickets: 2
     },
     {
-      params: 'francisco-y-karina escobar',
+      params: 'francisco-y-karina-escobar',
       name: 'Francisco y karina Escobar',
       tickets: 2
     },
