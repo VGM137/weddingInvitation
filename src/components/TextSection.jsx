@@ -62,7 +62,7 @@ const TextSection = ({specific, childrenSpecific, children}) => {
           }, 2200);
         }
       }
-      if(intersectionRatio == .9){
+      if(intersectionRatio == .5){
         dispatch(displayPhoto(entry.target.classList[1]))
         document.getElementById('photos-container').classList.add('grow')
       }
