@@ -196,7 +196,7 @@ const InfoContainer = (props) => {
           <h3 className='third-text hashtag'>{'#NuestraBodaJ&R'}</h3>
           <div className='facebook-container' >
             <a href="https://www.facebook.com/groups/767548173909504/" target="_blank" rel="noopener noreferrer">
-              ¡Escribenos en Facebook!
+              ¡Escríbenos en Facebook!
               <Facebook className='fb-logo' />
             </a>
           </div>

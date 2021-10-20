@@ -91,7 +91,7 @@
   margin: 0 0 10px 0;
 }
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 769px){
   .hero-text{
     margin: 0 0 15px 0;
     font-weight: 300;
@@ -101,10 +101,16 @@
   }
   .hero-text-container{
     font-size: 2.5em;
+    padding: 85px 10px 10px 10px;
   }
   .hero-secondary-text{
     font-size: .6em;
     width: 90%;
+  }
+}
+@media screen and (max-width: 426px){
+  .hero-text-container{
+    padding: 100px 10px 10px 10px;
   }
 }
 

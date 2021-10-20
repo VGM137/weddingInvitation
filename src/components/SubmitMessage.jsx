@@ -12,7 +12,7 @@ const SubmitMessage = (props) => {
       <div id='form-spacer' className='form-spacer'>
       </div>
       <div className='submit-container'>
-        <h1 className='submit-message'>Gracias por enviarnos tu mensaje, nos pondremos en contacto a la brevedad.</h1>
+        <h1 className='submit-message'>Gracias por confirmar tu asistencia, te esperamos con mucha emoción en nuestra boda.</h1>
       </div>
     </>
   )

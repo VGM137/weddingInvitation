@@ -3,7 +3,7 @@
   height: 100%;
   display: none;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 50% 50%;
   position: absolute;
   top: 0;
   box-sizing: border-box;
@@ -18,8 +18,14 @@
   height: 100%;
   width: 100%;
 }
-.frame-corner{
+.corner-container{
   width: auto;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+}
+.frame-corner{
+  width: fit-content;
   height: 100%;
 /*   padding: 10px; */
   box-sizing: border-box;
@@ -71,9 +77,19 @@
   .frame-container{
     bottom: 0;
   }
-  .frame-corner{
+  .corner-container{
     width: 100%;
     height: auto;
+  }
+  .frame-corner{
+    width: 100%;
+    height: fit-content;
+  }
+  .top-right{
+    grid-column: 3/4;
+  }
+  .bottom-right{
+    grid-column: 3/4;
   }
 }
 @media screen and (max-width: 426px){

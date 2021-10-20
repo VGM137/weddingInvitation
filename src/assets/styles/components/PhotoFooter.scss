@@ -35,7 +35,7 @@
   display: none;
 }
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 769px){
   .photo-footer{
     display: flex;
     height: 100%;
@@ -61,8 +61,6 @@
   .frame-corner{
     overflow: hidden;
   }
-}
-@media screen and (max-width: 767px){
   .photo-footer-frame{
     display: grid;
   }
