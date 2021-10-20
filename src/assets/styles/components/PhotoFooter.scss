@@ -58,6 +58,9 @@
     box-sizing: border-box;
     position: relative;
   }
+  .frame-corner{
+    overflow: hidden;
+  }
 }
 @media screen and (max-width: 767px){
   .photo-footer-frame{

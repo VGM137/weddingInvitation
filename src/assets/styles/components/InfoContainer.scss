@@ -100,7 +100,7 @@
 }
 .third-text{
   font-size: 1em;
-  margin: 5px auto;
+  margin: 5px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 200;
   display: inline-block;
@@ -300,6 +300,16 @@
 }
 .fb-logo{
   height: 100%;
+}
+.social-dressing-code{
+  display: flex;
+  width: 80%;
+  justify-content:space-evenly;
+  height: 45px;
+}
+.social-etiqueta{
+  height: 100%;
+  width: auto;
 }
 
 @media screen and (max-width: 769px){

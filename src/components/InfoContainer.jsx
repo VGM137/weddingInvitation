@@ -2,7 +2,6 @@ import React from "react";
 import { connect } from "react-redux";
 import Hero from "./Hero";
 import TextSection from "./TextSection";
-import Frame from "./Frame";
 import PersonalInvitation from "./PersonalInvitation";
 import ScrollButtons from "./ScrollButtons";
 import EngagedPhoto from '../assets/static/engaged-photo.svg'
@@ -13,8 +12,9 @@ import Theme3 from '../assets/static/theme3.svg'
 import Theme4 from '../assets/static/theme4.svg'
 import Date from '../assets/static/date.svg'
 import Knot from '../assets/static/knot.svg'
-import MapDeco from '../assets/static/mapDeco.svg'
 import Facebook from '../assets/static/facebook.svg'
+import EtiquetaM from '../assets/static/etiquetaM.svg'
+import EtiquetaH from '../assets/static/etiquetaH.svg'
 import '../assets/styles/components/InfoContainer.scss'
 
 
@@ -170,7 +170,7 @@ const InfoContainer = (props) => {
                 El Jardín de las flores`}</h2>
               <h2 id='event-secondary-text' className='event-secondary-text'>Calle Compuerta 5, El Molino, 56334 Chimalhuacán, Méx.</h2>
               <h1 id='main-text' className='main-text'>Horario:</h1>
-              <h2 id='secondary-text' className='secondary-text'>15:30 hrs.</h2>
+              <h2 id='secondary-text' className='secondary-text'>27/11/21 15:30 hrs.</h2>
             </div>
           </div>
         </div>
@@ -182,13 +182,17 @@ const InfoContainer = (props) => {
         <div className='info-cover' id='info-cover'></div>
         <div className='info-content'>
           <h1 className='main-text'>No faltes</h1>
-          <h3 className='third-text'>El regalo es opcional, pero lo más importante para nosotros es tu compañia</h3>
-          <h1 className='main-text'>Codigo de vestimenta</h1>
-          <h3 className='third-text'>Etiqueta</h3>
+          <h3 className='third-text'>El regalo es opcional, pero lo más importante para nosotros es tu compañía.</h3>
+          <h1 className='main-text'>Código de vestimenta</h1>
+          <div className='social-dressing-code'>
+            <EtiquetaM className='social-etiqueta'/>
+            <h3 className='third-text'>Etiqueta</h3>
+            <EtiquetaH className='social-etiqueta'/>
+          </div>
           <h1 className='main-text'>Redes sociales</h1>
           <h3 className='third-text'>
-            {`Escribenos un mensaje con tus mejores deseos, queremos compartir este momento contigo y tus invitados y es muy importante para nosotros que nos apoyes.
-            Entra al link de nuestro muro de facebook y confirma tu asistencia dejandonos saber que contamos contigo para festejar nuestra unión.`}</h3>
+            {`Escríbenos un mensaje con tus mejores deseos, queremos compartir este momento contigo y tus invitados y es muy importante para nosotros que nos apoyes.
+            Entra al link de nuestro muro de facebook y confirma tu asistencia dejándonos saber que contamos contigo para festejar nuestra unión.`}</h3>
           <h3 className='third-text hashtag'>{'#NuestraBodaJ&R'}</h3>
           <div className='facebook-container' >
             <a href="https://www.facebook.com/groups/767548173909504/" target="_blank" rel="noopener noreferrer">
@@ -205,11 +209,11 @@ const InfoContainer = (props) => {
           <h1 className='main-text'>Protocolo de salud</h1>
           <h2 className='secondary-text'>Medidas de higiene y seguridad:</h2>
           <ol className='health-protocol-list'>
-            <li className='secondary-text'>1. Por favor porta el cubrebocas todo el tiempo posible</li>
-            <li className='secondary-text'>2. Procura llevar tu gel antibacterial y utilizarlo con frecuencia</li>
-            <li className='secondary-text'>3. Permite que el personal revise la temperatura a la entrada del evento</li>
-            <li className='secondary-text'>4. Lava tus manos antes y despues de comer o cada vez que te levantes de tu mesa </li>
-            <li className='secondary-text'>5. Si sientes algún síntoma previo al evento háznoslo saber, nosotros comprenderemos tu ausencia</li>
+            <li className='secondary-text'>1. Por favor porta el cubrebocas todo el tiempo posible.</li>
+            <li className='secondary-text'>2. Procura llevar tu gel antibacterial y utilizarlo con frecuencia.</li>
+            <li className='secondary-text'>3. Permite que el personal revise la temperatura a la entrada del evento.</li>
+            <li className='secondary-text'>4. Lava tus manos antes y despues de comer o cada vez que te levantes de tu mesa.</li>
+            <li className='secondary-text'>5. Si sientes algún síntoma previo al evento háznoslo saber, nosotros comprenderemos tu ausencia.</li>
           </ol>
         </div>
       </TextSection>

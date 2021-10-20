@@ -83,11 +83,11 @@
 }
 
 @media screen and (max-width: 426px){
-  .photoNine-container, .photoTen-container, .photoEleven-container, .photoTwelve-container, .photoFourteen-container, .photoThirteen-container, .photoFifteen-container{
-    display: block;
+  .photoNine-container, .photoTen-container, .photoEleven-container, .photoFourteen-container, .photoThirteen-container{
+    display: flex;
     height: 100vh;
     margin: 0 auto;
-    width: auto;
+    width: 100%;
     position: absolute;
     bottom: 0;
     justify-content: center;
@@ -107,10 +107,18 @@
     height: auto;
     margin: auto;
   }
-  .photoTwo-container, .photoThree-container, .photoSix-container, .photoSeven-container, .photoEight-container{
+  .photoTwelve-container, .photoFifteen-container, .photoThree-container{
+    width: 100%;
     height: 100%;
   }
-  .photoTwo, .photoThree, .photoSix, .photoSeven, .photoEight{
+  .photoTwelve, .photoFifteen, .photoThree{
+    width: 100%;
+    height: auto;
+  }
+  .photoTwo-container, .photoSix-container, .photoSeven-container, .photoEight-container{
+    height: 100%;
+  }
+  .photoTwo, .photoSix, .photoSeven, .photoEight{
     height: 100%;
     width: auto;
   }

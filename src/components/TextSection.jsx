@@ -31,8 +31,8 @@ const TextSection = ({specific, childrenSpecific, children}) => {
 
     if(doAnimate == true){
       if(intersectionRatio == 0.2){
-        dispatch(displayPhoto(entry.target.classList[1]))
-        document.getElementById('photos-container').classList.add('grow')
+        
+        
         entry.target.childNodes[0].style.display = 'grid'
         entry.target.childNodes[0].classList.add('frameApear')
 
@@ -61,6 +61,10 @@ const TextSection = ({specific, childrenSpecific, children}) => {
             })
           }, 2200);
         }
+      }
+      if(intersectionRatio == .9){
+        dispatch(displayPhoto(entry.target.classList[1]))
+        document.getElementById('photos-container').classList.add('grow')
       }
     }
 

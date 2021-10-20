@@ -60,8 +60,8 @@ const PhotosContainer = (props) => {
             <PhotoFooter>
               <div >
                 <h1 className='footer-main-text'>
-                {`Motivados por el amor que nos tenemos, con alegria,
-                  la bendicion de dios y nuestros padres.`}
+                {`Motivados por el amor que nos tenemos, con alegría,
+                  la bendición de Dios y nuestros padres.`}
                 </h1>
               </div> 
             </PhotoFooter>
@@ -69,13 +69,7 @@ const PhotosContainer = (props) => {
         }
         {isThirdPhoto &&
           <>
-            <Photo9 />
-            {/* <div id='portrait' className='portrait'>
-              <Photo3/>
-            </div>
-            <PhotoFooter>
-              <Names className='previous'/>
-            </PhotoFooter> */}
+            <Photo14 />
           </>
         }
         {isKnotPhoto &&
@@ -119,23 +113,11 @@ const PhotosContainer = (props) => {
         {isSeventhPhoto &&
           <>
           <Photo9/>
-            {/* <div id='portrait' className='portrait'>
-              <Photo2/>
-            </div>
-            <PhotoFooter>
-              <Names className='previous'/>
-            </PhotoFooter> */}
           </>
         }
         {isEightPhoto &&
           <>
             <Photo13/>
-            {/* <div id='portrait' className='portrait'>
-              <Photo2/>
-            </div>
-            <PhotoFooter>
-              <Names className='previous'/>
-            </PhotoFooter> */}
           </>
         }
         {isNinthPhoto &&

@@ -97,6 +97,11 @@ const PersonalInvitation = (props) => {
           })
         }, 5200);
         }
+        if(intersectionRatio == 0.9){
+        
+          props.displayPhoto(entry.target.classList[0])
+          document.getElementById('photos-container').classList.add('grow')
+        }
     }
 
     if(intersectionRatio <= 0.1){
