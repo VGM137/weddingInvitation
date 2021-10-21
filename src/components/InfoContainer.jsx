@@ -87,7 +87,7 @@ const InfoContainer = (props) => {
             <Knot className='knot-img' />
           </div>
           <h1 className='main-text knot-text'>  
-            {`Cordón de tres dobleces no se rompe facilmente.`}
+            {`Cordón de tres dobleces no se rompe fácilmente.`}
           </h1>
         </div>
       </TextSection>
@@ -212,7 +212,7 @@ const InfoContainer = (props) => {
             <li className='secondary-text'>1. Por favor porta el cubrebocas todo el tiempo posible.</li>
             <li className='secondary-text'>2. Procura llevar tu gel antibacterial y utilizarlo con frecuencia.</li>
             <li className='secondary-text'>3. Permite que el personal revise la temperatura a la entrada del evento.</li>
-            <li className='secondary-text'>4. Lava tus manos antes y despues de comer o cada vez que te levantes de tu mesa.</li>
+            <li className='secondary-text'>4. Lava tus manos antes y después de comer o cada vez que te levantes de tu mesa.</li>
             <li className='secondary-text'>5. Si sientes algún síntoma previo al evento háznoslo saber, nosotros comprenderemos tu ausencia.</li>
           </ol>
         </div>

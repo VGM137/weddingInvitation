@@ -103,7 +103,7 @@ const PhotosContainer = (props) => {
                 <h2 className='footer-main-text'>
                 {`El lugar donde inicia 
                   el tan anhelado momento,
-                  cuando el principe 
+                  cuando el príncipe 
                   rescata a su princesa`}
                 </h2>
               </div> 

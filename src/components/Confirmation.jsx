@@ -1,7 +1,7 @@
 import React from 'react';
 import { useForm } from '@formspree/react';
 import { connect } from 'react-redux';
-import { formChange, confirmation, handleSubmission } from '../actions'
+import { formChange, confirmation, handleSubmission, isPersonalInvitation } from '../actions'
 import '../assets/styles/components/Confirmation.scss'
 import SubmitMessage from '../components/SubmitMessage'
 import SubmitError from '../components/SubmitError'
@@ -12,6 +12,7 @@ const Confirmation = (props) => {
   let invitationTickets = props.invitationTickets  
   let formTickets = props.formTickets 
   let confirm = props.checked.toString()
+  let isInvitation = props.invitationParams
 
   const [state, handleSubmit] = useForm("xleakdez");
 
@@ -39,6 +40,8 @@ const Confirmation = (props) => {
 
   return( 
     <>
+    {isInvitation 
+      ?
       <div id="form" className="form">
         <h1 className="form-mainText">Por favor confirma tu asistencia.</h1>
         <form id='form-form' className="form-form" onSubmit={handleSubmit}>
@@ -86,12 +89,51 @@ const Confirmation = (props) => {
           </button>
         </form>
       </div>
+      :
+      <div id="form" className="form">
+        <h1 className="form-mainText">Por favor confirma tu asistencia.</h1>
+        <form id='form-form' className="form-form-new-invited" onSubmit={handleSubmit}>
+          <input 
+            type="checkbox" 
+            name="name" 
+            id="form-name" 
+            className="form-name form-item" 
+            placeholder="Nombre"
+            onClick={handleClick}
+            value={'Confirma asistencia'}
+            required/>
+          <h2 id='form-secondaryText' className='form-secondaryText text1' >Confirmar mi asistencia</h2>
+              <input 
+                type="text" 
+                min={3}
+                name="tickets" 
+                id="form-new-invited" 
+                className="form-new-invited form-item" 
+                onChange={handleChange}
+                value={formTickets}
+                controls={true}
+                placeholder='Escribe tu nombre.'
+                required/>
+              <h3 alt={`*Por favor indicanos tu nombre para apartar tu lugar.`} className='ticket-advice'></h3>
+
+          <button 
+            type='submit'
+            formMethod='post'
+            className="form-button" 
+            id="form-button" 
+            disabled={formTickets.length < 3 || confirm == 'false' }>
+            Enviar
+          </button>
+        </form>
+      </div>
+    }
     </>
   )
 }
 
 const mapStateToProps = (state) => {
   return {
+    invitationParams: state.isPersonalInvitation.params,
     invitationName: state.isPersonalInvitation.name,
     invitationTickets: state.isPersonalInvitation.tickets,
     checked: state.form.checked,

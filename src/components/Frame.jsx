@@ -9,16 +9,16 @@ import '../assets/styles/components/Frame.scss'
 const Frame = ({specific}) => {
   return(
     <div id='frame-container' className={`frame-container ${specific}`}>
-      <div className='corner-container top-left'>
+      <div className='corner-container top-left-frame'>
         <FrameTL id='top-left' className={`top-left frame-corner corner-${specific}`} />
       </div>
-      <div className='corner-container top-right'>
+      <div className='corner-container top-right-frame'>
         <FrameTR id='top-right' className={`top-right frame-corner corner-${specific}`} />
       </div>
-      <div className='corner-container bottom-left'>
+      <div className='corner-container bottom-left-frame'>
         <FrameBL id='bottom-left' className={`bottom-left frame-corner corner-${specific}`} />
       </div>
-      <div className='corner-container bottom-right'>
+      <div className='corner-container bottom-right-frame'>
         <FrameBR id='bottom-right' className={`bottom-right frame-corner corner-${specific}`} />
       </div>
     </div>

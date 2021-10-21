@@ -183,8 +183,22 @@ const PersonalInvitation = (props) => {
           </div>
         </div>
       :
-        <>
-        </>
+        <div id='personal-invitation' className='personal-invitation' ref={targetRef}>
+          <div id='ticket' className='ticket'>
+            <div className='ticket-deco'>
+              <div className='ticket-left-cover'></div>
+              <div className='ticket-right-cover'></div>
+              <Stamp className='ticket-stamp'/>
+            </div>
+            <Frame  />
+            <h1 id='ticket-main-text' className='ticket-main-text'>{`Hola`}</h1>
+            <h2 id='ticket-secondary-text' className='ticket-secondary-text'>Estamos muy felices por la celebración de nuestra unión y nos encantaría que nos acompañes.</h2>
+            
+            <h2 id='ticket-secondary-text' className='ticket-secondary-text'>Te esperamos con mucho gusto para compartir este día tan especial contigo.</h2>
+            
+            <Confirmation />
+          </div>
+        </div>
     }
     </>
   )

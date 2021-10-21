@@ -72,6 +72,26 @@
   align-self: flex-end;
   justify-self: flex-end;
 }
+.top-left-frame{
+  grid-column: 1/2;
+  grid-row: 1/2;
+  overflow: hidden;
+}
+.top-right-frame{
+  grid-column: 3/4;
+  grid-row: 1/2;
+  overflow: hidden;
+}
+.bottom-left-frame{
+  grid-column: 1/2;
+  grid-row: 2/3;
+  overflow: hidden;
+}
+.bottom-right-frame{
+  grid-column: 3/4;
+  grid-row: 2/3;
+  overflow: hidden;
+}
 
 @media screen and (max-width: 769px){
   .frame-container{
@@ -101,6 +121,22 @@
   }
   .bottom-right{
     grid-column: 2/3;
+  }
+  .top-left-frame{
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .top-right-frame{
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+  .bottom-left-frame{
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  .bottom-right-frame{
+    grid-column: 2/3;
+    grid-row: 2/3;
   }
 }
 
