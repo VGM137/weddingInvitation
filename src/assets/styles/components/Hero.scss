@@ -53,8 +53,8 @@
   bottom: 0;
   box-sizing: border-box;
   display: flex;
-  padding: 0 20px;
-  position: absolute;
+/*   padding: 0 20px; */
+  position: relative;
   width: 90%;
   justify-self: center;
   margin: 0 auto;
@@ -62,7 +62,7 @@
 }
 .hero-footer-step1{
   font-family: 'Ephesis', cursive;
-  font-size: .8em;
+  font-size: 2em;
   font-weight: 100;
   left: 10px;
   justify-content: flex-start;
@@ -72,7 +72,7 @@
 }
 .hero-footer-step2{
   font-family: 'Ephesis', cursive;
-  font-size: .8em;
+  font-size: 2em;
   font-weight: 100;
   left: 10px;
   justify-content: center;
@@ -82,7 +82,7 @@
 }
 .hero-footer-step3{
   font-family: 'Ephesis', cursive;
-  font-size: .8em;
+  font-size: 2em;
   font-weight: 100;
   left: 10px;
   justify-content: flex-end;

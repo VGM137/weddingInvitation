@@ -44,7 +44,16 @@ const PhotosContainer = (props) => {
     <div id='photos-container' className='photos-container' loading='lazy' onLoad={(e) => handleLoad(e)}>
         {isHero &&
           <>
-            <Photo11/>
+            <div id='portrait' className='portrait'>
+              <Photo5/>
+            </div>
+            <PhotoFooter>
+              <div className='hero-footer'>
+                <h2 className='hero-footer-step1'>Porque la vida</h2>
+                <h2 className='hero-footer-step2'>se tornó de colores cuando </h2>
+                <h2 className='hero-footer-step3'>entraste en mi vida.</h2>
+              </div> 
+            </PhotoFooter>
           </>
         }
         {isFirstPhoto &&
@@ -69,7 +78,7 @@ const PhotosContainer = (props) => {
         }
         {isThirdPhoto &&
           <>
-            <Photo14 />
+            <Photo11 />
           </>
         }
         {isKnotPhoto &&

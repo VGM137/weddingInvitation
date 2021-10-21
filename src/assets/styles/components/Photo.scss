@@ -81,7 +81,7 @@
     height: auto;
     width: 100vw;
   }
-  .photoThree-container, .photoSix-container{
+  .photoThree-container, .photoFive-container, .photoSix-container{
     align-items: flex-start;
     display: flex;
     height: 100%;
@@ -93,6 +93,12 @@
     bottom: 13vh;
     width: 100%;
     height:fit-content;
+  }
+  .photoFive{
+    height: 100%;
+    width: auto;
+    display: flex;
+    transform: scale(1.8);
   }
   .photoSix{
     bottom: 0;
@@ -143,6 +149,12 @@
   .photoTwo, .photoSix, .photoSeven, .photoEight{
     height: 100%;
     width: auto;
+  }
+  .photoFive{
+    height: 100%;
+    width: auto;
+    display: flex;
+    transform: scale(1);
   }
   .photoTen{
     margin: 0
