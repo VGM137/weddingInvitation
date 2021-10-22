@@ -310,9 +310,3 @@ const dispatchStateToPops = {
 }
 
 export default connect(mapSateToProps, dispatchStateToPops)(Home)
-
-francisco-y-karina
-facundo-hernandez
-fam-bricia
-francisco-y-juana
-antonio-e-irma
