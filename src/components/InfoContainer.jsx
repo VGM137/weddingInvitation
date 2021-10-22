@@ -108,7 +108,7 @@ const InfoContainer = (props) => {
           <h2 id='secondary-text' className='secondary-text'>Luis y Lidia Monsalvo</h2>
           <h2 id='secondary-text' className='secondary-text'>Ana Ceja</h2>
           <h2 id='secondary-text' className='secondary-text'>Dalia y Abigail Valerio</h2>
-          <h2 id='secondary-text' className='secondary-text'>Susana Escobar Hernandez</h2>
+          <h2 id='secondary-text' className='secondary-text'>Susana Escobar Hernández</h2>
           <div id='deco-element-container' className='deco-element-container'>
             <Theme2 id='deco-element-img' className='deco-element-img' />
           </div>

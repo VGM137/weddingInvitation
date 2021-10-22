@@ -136,13 +136,13 @@ const Home = (props) => {
       tickets: 2
     },
     {
-      params: 'antonio-hernandez',
-      name: 'Antonio Hernandez',
+      params: 'antonio-e-irma',
+      name: 'Irma Villegas y Antonio Hernandez',
       tickets: 2
     },
     {
-      params: 'fam-escobar-juana',
-      name: 'Fam. Escobar (juana)',
+      params: 'francisco-y-juana',
+      name: 'Francisco Escobar y Juana Escobar',
       tickets: 2
     },
     {
@@ -171,8 +171,8 @@ const Home = (props) => {
       tickets: 2
     },
     {
-      params: 'facundo-escobar',
-      name: 'Facundo Escobar',
+      params: 'facundo-hernandez',
+      name: 'Facundo Hernández',
       tickets: 2
     },
     {
@@ -186,8 +186,8 @@ const Home = (props) => {
       tickets: 2
     },
     {
-      params: 'francisco-y-karina-escobar',
-      name: 'Francisco y karina Escobar',
+      params: 'francisco-y-karina',
+      name: 'Francisco Escobar y Karina Martínez',
       tickets: 2
     },
     {
@@ -206,8 +206,8 @@ const Home = (props) => {
       tickets: 2
     },
     {
-      params: 'fam-brisia',
-      name: 'Fam. Brisia',
+      params: 'fam-bricia',
+      name: 'Fam. Bricia',
       tickets: 6
     },
     {
@@ -310,3 +310,9 @@ const dispatchStateToPops = {
 }
 
 export default connect(mapSateToProps, dispatchStateToPops)(Home)
+
+francisco-y-karina
+facundo-hernandez
+fam-bricia
+francisco-y-juana
+antonio-e-irma
