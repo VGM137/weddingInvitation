@@ -25,7 +25,9 @@ const PersonalInvitation = (props) => {
 
     let children = entry.target.childNodes[0].childNodes
     if(doAnimate == true){
-      if(intersectionRatio == 0.2){
+      if(intersectionRatio == 0.5){
+        props.displayPhoto(entry.target.classList[0])
+        document.getElementById('photos-container').classList.add('grow')
         
         props.displayPhoto(entry.target.classList[0])
         document.getElementById('photos-container').classList.add('grow')
@@ -96,11 +98,6 @@ const PersonalInvitation = (props) => {
             child.classList.remove('invitaitonFadeUp')
           })
         }, 5200);
-        }
-        if(intersectionRatio == 0.9){
-        
-          props.displayPhoto(entry.target.classList[0])
-          document.getElementById('photos-container').classList.add('grow')
         }
     }
 
