@@ -89,7 +89,7 @@ const Hero = (props) => {
             ${invitation.name}`}
           </h1>
         }
-        <h1 id='hero-text-greet' className='hero-text-greet hero-text'>¡Te invitamos a nuestra boda!</h1>
+        <h1 id='hero-text-greet' className='hero-text-greet hero-text'>¡Te invitamos a nuestro evento!</h1>
       </div>
       <Photo1/>
     </div>
