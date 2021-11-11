@@ -156,9 +156,9 @@ const PersonalInvitation = (props) => {
             </div>
             <Frame  />
             <h1 id='ticket-main-text' className='ticket-main-text'>{`Hola ${invitation.name}`}</h1>
-            <h2 id='ticket-secondary-text' className='ticket-secondary-text'>Estamos muy felices por la celebración de nuestra unión y nos encantaría que nos acompañes.</h2>
+            <h2 id='ticket-secondary-text' className='ticket-secondary-text'>Esta es una invitación de muestra, si te interesa crear una invitación para tu evento no dudes en llenar el siguiente campo con tu nombre, me pondré en contacto contigo para encontrar la mejor solución para tus necesidades.</h2>
 
-            {invitation.tickets > 1
+           {/*  {invitation.tickets > 1
               ?
                 <>
                   <h2 id='ticket-secondary-text' className='ticket-secondary-text'>
@@ -175,7 +175,7 @@ const PersonalInvitation = (props) => {
                 <>                         
                   <h2 id='ticket-secondary-text' className='ticket-secondary-text'>Tu invitación es individual, te esperamos con mucho gusto para compartir este día tan especial contigo.</h2>
                 </>
-            }
+            } */}
             <Confirmation />
           </div>
         </div>
@@ -189,9 +189,7 @@ const PersonalInvitation = (props) => {
             </div>
             <Frame  />
             <h1 id='ticket-main-text' className='ticket-main-text'>{`Hola`}</h1>
-            <h2 id='ticket-secondary-text' className='ticket-secondary-text'>Estamos muy felices por la celebración de nuestra unión y nos encantaría que nos acompañes.</h2>
-            
-            <h2 id='ticket-secondary-text' className='ticket-secondary-text'>Te esperamos con mucho gusto para compartir este día tan especial contigo.</h2>
+            <h2 id='ticket-secondary-text' className='ticket-secondary-text'>Esta es una invitación de muestra, si te interesa crear una invitación para tu evento no dudes en llenar el siguiente campo con tu nombre, me pondré en contacto contigo para encontrar la mejor solución para tus necesidades.</h2>
             
             <Confirmation />
           </div>

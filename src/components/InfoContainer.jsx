@@ -12,7 +12,7 @@ import Theme3 from '../assets/static/theme3.svg'
 import Theme4 from '../assets/static/theme4.svg'
 import Date from '../assets/static/date.svg'
 import Knot from '../assets/static/knot.svg'
-import Facebook from '../assets/static/facebook.svg'
+import wa from '../assets/static/wa.png'
 import EtiquetaM from '../assets/static/etiquetaM.svg'
 import EtiquetaH from '../assets/static/etiquetaH.svg'
 import '../assets/styles/components/InfoContainer.scss'
@@ -38,7 +38,7 @@ const InfoContainer = (props) => {
             <EngagedPhoto id='info-engaged-img' className='info-engaged-img' />
           </div>
           <h1 id='main-text' className='main-text'>
-            {`Jazmín    &   Rodrigo`}</h1>
+            {`Javier   &   Roberta`}</h1>
           <div id='engaged-rings-container' className='engaged-rings-container'>
             <Rings id='engaged-rings' className='engaged-rings' />
           </div>
@@ -56,24 +56,20 @@ const InfoContainer = (props) => {
         <div id='info-content' className='info-content info-parents'>
           <h1 id='main-text' className='main-text'>Nuestros padres:</h1>
           <h2 id='secondary-text' className='secondary-text'>
-            {`Graciela 
-              Santana Rivera
+            {`Madre del novio
 
               &
 
-              Adrián 
-              Flores Rodriguez`}</h2>
+              Padre del novio`}</h2>
           <div id='deco-element-container' className='deco-element-container'>
             <Theme1 id='deco-element-img' className='deco-element-img' />
           </div>
           <h2 id='secondary-text' className='secondary-text'>
-            {`María de los Ángeles 
-              Hernández Ayala
+            {`Madre de la novia
 
               &
 
-              José Rodrigo 
-              Vallejo Calderon`}</h2>
+              Padre de la novia`}</h2>
         </div>
       </TextSection>
 
@@ -97,18 +93,16 @@ const InfoContainer = (props) => {
         <div id='info-content' className='info-content'>
           <h1 id='main-text' className='main-text'>Nuestros Padrinos:</h1>
           <h2 id='secondary-text' className='secondary-text'>{
-          `Francisco Javier Escobar 
-          y Karina Martínez`}  </h2>
+          `Padrinos`}  </h2>
           <h2 id='secondary-text' className='secondary-text'>{
-          `Laura Haydee 
-          Vallejo Hernández`}</h2>
-          <h2 id='secondary-text' className='secondary-text'>Jessica Flores          </h2>
-          <h2 id='secondary-text' className='secondary-text'>Eduardo Hernández</h2>
-          <h2 id='secondary-text' className='secondary-text'>Bibiana Álvarez</h2>
-          <h2 id='secondary-text' className='secondary-text'>Luis y Lidia Monsalvo</h2>
-          <h2 id='secondary-text' className='secondary-text'>Ana Ceja</h2>
-          <h2 id='secondary-text' className='secondary-text'>Dalia y Abigail Valerio</h2>
-          <h2 id='secondary-text' className='secondary-text'>Susana Escobar Hernández</h2>
+          `Padrinos`}</h2>
+          <h2 id='secondary-text' className='secondary-text'>Padrinos</h2>
+          <h2 id='secondary-text' className='secondary-text'>Padrinos</h2>
+          <h2 id='secondary-text' className='secondary-text'>Padrinos</h2>
+          <h2 id='secondary-text' className='secondary-text'>Padrinos</h2>
+          <h2 id='secondary-text' className='secondary-text'>Padrinos</h2>
+          <h2 id='secondary-text' className='secondary-text'>Padrinos</h2>
+          <h2 id='secondary-text' className='secondary-text'>Padrinos</h2>
           <div id='deco-element-container' className='deco-element-container'>
             <Theme2 id='deco-element-img' className='deco-element-img' />
           </div>
@@ -119,10 +113,10 @@ const InfoContainer = (props) => {
         <div className='info-cover' id='info-cover'></div>
         <div id='info-content' className='info-content'>
           <h1 id='main-text' className='main-text'>Damas de Honor</h1>
-          <h2 id='secondary-text' className='secondary-text'>Diana Flores</h2>
-          <h2 id='secondary-text' className='secondary-text'>Jessica Flores</h2>
-          <h2 id='secondary-text' className='secondary-text'>Valeria Hernández </h2>
-          <h2 id='secondary-text' className='secondary-text'>Norma Laguna</h2>
+          <h2 id='secondary-text' className='secondary-text'>Dama de honor</h2>
+          <h2 id='secondary-text' className='secondary-text'>Dama de honor</h2>
+          <h2 id='secondary-text' className='secondary-text'>Dama de honor</h2>
+          <h2 id='secondary-text' className='secondary-text'>Dama de honor</h2>
           <div id='deco-element-container' className='deco-element-container'>
             <Theme4 id='deco-element-img' className='deco-element-img' />
           </div>
@@ -133,10 +127,10 @@ const InfoContainer = (props) => {
         <div className='info-cover' id='info-cover'></div>
         <div id='info-content' className='info-content'>
           <h1 id='main-text' className='main-text'>Caballeros de Honor</h1>
-          <h2 id='secondary-text' className='secondary-text'>Rafael Avendaño</h2>
-          <h2 id='secondary-text' className='secondary-text'>Francisco Escobar</h2>
-          <h2 id='secondary-text' className='secondary-text'>Eduardo Hernández</h2>
-          <h2 id='secondary-text' className='secondary-text'>Esteban Valverde</h2>
+          <h2 id='secondary-text' className='secondary-text'>Caballero de honor</h2>
+          <h2 id='secondary-text' className='secondary-text'>Caballero de honor</h2>
+          <h2 id='secondary-text' className='secondary-text'>Caballero de honor</h2>
+          <h2 id='secondary-text' className='secondary-text'>Caballero de honor</h2>
           <div id='deco-element-container' className='deco-element-container'>
             <Theme3 id='deco-element-img' className='deco-element-img' />
           </div>
@@ -156,7 +150,8 @@ const InfoContainer = (props) => {
                 <iframe 
                   id='google-map'
                   className='google-map'
-                  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDTjYvsjcBXvX8draj42iSB8iPA7cWlJGQ&q=place_id:ChIJEw77P-vj0YURV9IkkiJ_DYY" 
+                  
+                  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDTjYvsjcBXvX8draj42iSB8iPA7cWlJGQ&q=place_id:ChIJTQGqdSv50YURz-imDdIQ2Bc" 
                   width="200px" 
                   height="200px" 
                   allowFullScreen="" 
@@ -169,9 +164,9 @@ const InfoContainer = (props) => {
               <h2 id='event-secondary-text' className='event-secondary-text'>{
                 `Te esperamos en 
                 El Jardín de las flores`}</h2>
-              <h2 id='event-secondary-text' className='event-secondary-text'>Calle Compuerta 5, El Molino, 56334 Chimalhuacán, Méx.</h2>
+              <h2 id='event-secondary-text' className='event-secondary-text'>Calle dirección, C.P., Estado, Ciudad</h2>
               <h1 id='main-text' className='main-text'>Horario:</h1>
-              <h2 id='secondary-text' className='secondary-text'>27/11/21 15:30 hrs.</h2>
+              <h2 id='secondary-text' className='secondary-text'>Fecha y hora</h2>
             </div>
           </div>
         </div>
@@ -192,13 +187,12 @@ const InfoContainer = (props) => {
           </div>
           <h1 className='main-text'>Redes sociales</h1>
           <h3 className='third-text'>
-            {`Escríbenos un mensaje con tus mejores deseos, queremos compartir este momento contigo y tus invitados y es muy importante para nosotros que nos apoyes.
-            Entra al link de nuestro muro de facebook y confirma tu asistencia dejándonos saber que contamos contigo para festejar nuestra unión.`}</h3>
+            {`En esta sección podrás enviar un mensaje a tus invitados con información específica que quieras compartir con ellos referente a tu evento.`}</h3>
           <h3 className='third-text hashtag'>{'#NuestraBodaJ&R'}</h3>
           <div className='facebook-container' >
-            <a href="https://www.facebook.com/groups/767548173909504/" target="_blank" rel="noopener noreferrer">
-              ¡Escríbenos en Facebook!
-              <Facebook className='fb-logo' />
+            <a href="https://wa.me/message/3MBUWXZWU3ZEI1" target="_blank" rel="noopener noreferrer">
+              ¡Contactame por WhatsApp!
+              <img src={wa} className='fb-logo' />
             </a>
           </div>
         </div>

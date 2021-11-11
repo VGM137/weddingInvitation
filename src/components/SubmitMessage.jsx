@@ -11,25 +11,12 @@ const SubmitMessage = (props) => {
 
   return (
     <>
-    {isInvitation
-      ?
-      <>
-        <div id='form-spacer' className='form-spacer'>
-        </div>
-        <div className='submit-container'>
-        <h1 className='submit-message'>Gracias por confirmar tu asistencia, te esperamos con mucha emoción en nuestra boda.</h1>
-        </div>
-        </>
-      :
-      <>
-        <div id='form-spacer' className='form-spacer'>
-        </div>
-        <div className='submit-container'>
-          <h1 className='submit-message'>Gracias por registrarte, nos pondremos en contacto contigo.</h1>
-        </div>
-      </>
-    }
+      <div id='form-spacer' className='form-spacer'></div>
+      <div className='submit-container'>
+        <h1 className='submit-message'>Gracias por tu mensaje, me pondré en contacto contigo a la brevedad.</h1>
+      </div>
     </>
+
   )
 };
 

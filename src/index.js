@@ -19,12 +19,10 @@ const initialState = {
   isPersonalInvitation: {
     params: false,
     name: '',
-    tickets: '',
-    children: ''
   },
   form: {
     checked: false,
-    tickets: ''
+    message: ''
   },
   submission: {
     completed: false,

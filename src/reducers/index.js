@@ -43,7 +43,7 @@ const reducer = (state, action) => {
             ...state,
             form: {
               checked: state.form.checked,
-              tickets: action.payload,
+              message: action.payload,
             }
           }
 
@@ -52,7 +52,7 @@ const reducer = (state, action) => {
             ...state,
             form: {
               checked: action.payload,
-              tickets: state.form.tickets,
+              message: state.form.message,
             }
           }
 
@@ -61,7 +61,6 @@ const reducer = (state, action) => {
           ...state,
           form: {
             checked: false,
-            tickets: ''
           }
         }
 
