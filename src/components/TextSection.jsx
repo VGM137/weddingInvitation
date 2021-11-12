@@ -69,6 +69,7 @@ const TextSection = ({specific, childrenSpecific, children}) => {
     if(intersectionRatio <= 0.1){
       doAnimate = true
       entry.target.childNodes[1].style.display = 'none'
+      entry.target.childNodes[0].style.display = 'none'
       document.getElementById('photos-container').classList.remove('grow')
     }
 

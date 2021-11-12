@@ -53,7 +53,7 @@ const Confirmation = (props) => {
             onClick={handleClick}
             value={'Confirma asistencia'}
             required/>
-          <h2 id='form-secondaryText' className='form-secondaryText text1' >Ingresa tu nombre y pondré en contacto contigo a la brevedad.</h2>
+          <h2 id='form-secondaryText' className='form-secondaryText text1' >Confirmar</h2>
               <input 
                 type="text" 
                 min={3}
@@ -63,7 +63,7 @@ const Confirmation = (props) => {
                 onChange={handleChange}
                 value={formTickets}
                 controls={true}
-                placeholder='Escribe tu nombre.'
+                placeholder='Escribe tu e-mail.'
                 required/>
               <h3 alt={`*Por favor indicanos tu nombre para apartar tu lugar.`} className='ticket-advice'></h3>
 

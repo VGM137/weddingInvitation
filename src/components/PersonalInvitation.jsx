@@ -58,9 +58,8 @@ const PersonalInvitation = (props) => {
               })
             }
           })
-        }, 2500)
 
-        setTimeout(() => {
+        /* setTimeout(() => { */
           children.forEach(child => {
             if(child.classList == 'ticket-deco'){
               child.childNodes.forEach(children => {
@@ -71,33 +70,35 @@ const PersonalInvitation = (props) => {
               })
             }
           })
-        }, 2500)
-        setTimeout(() => {
+        /* }, 2500) */
+        /* setTimeout(() => { */
           children.forEach(child => {
             if(child.classList[0] == 'frame-container'){
               child.classList.add('frameApear')
              }
           })
-        }, 2800);
+        /* }, 2800); */
 
-        setTimeout(() => {
+        /* setTimeout(() => { */
           children.forEach(child => {
             if(child.classList[0] == 'form'){
               child.style.display = 'flex'
             }
             if(child.classList[0] !== 'form' && child.classList[0] !== 'ticket-deco' && child.classList[0] !== 'frame-container'){
+              console.log(child.classList[0])
               child.style.display = 'flex'
               child.classList.add('invitationFadeUp')
             }
           })
-        }, 2500);
+        /* }, 2500); */
 
-        setTimeout(() => {
+        /* setTimeout(() => { */
           children.forEach(child => {
             child.classList.remove('desapear')
             child.classList.remove('invitaitonFadeUp')
           })
-        }, 5200);
+        /* }, 5200); */
+        }, 2500)
         }
     }
 
@@ -157,25 +158,6 @@ const PersonalInvitation = (props) => {
             <Frame  />
             <h1 id='ticket-main-text' className='ticket-main-text'>{`Hola ${invitation.name}`}</h1>
             <h2 id='ticket-secondary-text' className='ticket-secondary-text'>Esta es una invitación de muestra, si te interesa crear una invitación para tu evento no dudes en llenar el siguiente campo con tu nombre, me pondré en contacto contigo para encontrar la mejor solución para tus necesidades.</h2>
-
-           {/*  {invitation.tickets > 1
-              ?
-                <>
-                  <h2 id='ticket-secondary-text' className='ticket-secondary-text'>
-                    {invitation.children < 1
-                      ?
-                        `Esta invitación es para ti y ${invitation.tickets == 2 ? 'una persona más.' : `${invitation.tickets-1} personas más.`}`
-                      : 
-                        `Esta invitación es para ti ${invitation.tickets == 2 ? 'y un niño.' : ` ${invitation.tickets-2} ${invitation.tickets-2 == 1 ? 'adulto' : 'adultos'} y ${invitation.children} ${invitation.children == 1 ? 'niño' : 'niños'}`}`
-                    }
-                  </h2>
-                  <h2 id='ticket-secondary-text' className='ticket-secondary-text'>Te esperamos con mucho gusto para compartir este día tan especial contigo y tus invitados.</h2>
-                </>
-              :
-                <>                         
-                  <h2 id='ticket-secondary-text' className='ticket-secondary-text'>Tu invitación es individual, te esperamos con mucho gusto para compartir este día tan especial contigo.</h2>
-                </>
-            } */}
             <Confirmation />
           </div>
         </div>
@@ -189,7 +171,7 @@ const PersonalInvitation = (props) => {
             </div>
             <Frame  />
             <h1 id='ticket-main-text' className='ticket-main-text'>{`Hola`}</h1>
-            <h2 id='ticket-secondary-text' className='ticket-secondary-text'>Esta es una invitación de muestra, si te interesa crear una invitación para tu evento no dudes en llenar el siguiente campo con tu nombre, me pondré en contacto contigo para encontrar la mejor solución para tus necesidades.</h2>
+            <h2 id='ticket-secondary-text' className='ticket-secondary-text'>Esta es una invitación de muestra, si te interesa crear una invitación para tu evento no dudes en llenar el siguiente campo con tu correo electrónico, me pondré en contacto contigo para encontrar la mejor solución para tus necesidades.</h2>
             
             <Confirmation />
           </div>
